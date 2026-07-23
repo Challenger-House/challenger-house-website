@@ -870,3 +870,13 @@ h2, h3, summary, .sheet h3, .offer h3, .door h3, .face h3{ font-family:var(--hea
   margin:-6px 0 20px -4px;
 }
 @media (max-width:680px){ .page-ghost{ margin-bottom:12px } }
+
+/* ---- v2.2: teal-bar zone labels (white mono on racing green) + ghost number to the LEFT on desktop ---- */
+.ztext{ background:var(--accent); color:var(--paper); padding:6px 13px; display:inline-block }
+
+/* desktop: ghost number sits to the left of the hero content; mobile keeps it on top */
+@media (min-width:821px){
+  .hero.has-ghost .wrap, .hero.has-ghost .wrap-narrow{ display:grid; grid-template-columns:auto 1fr; column-gap:46px; align-items:start }
+  .hero.has-ghost .wrap > *, .hero.has-ghost .wrap-narrow > *{ grid-column:2; min-width:0 }
+  .hero.has-ghost .wrap > .page-ghost, .hero.has-ghost .wrap-narrow > .page-ghost{ grid-column:1; grid-row:1 / span 50; align-self:start; margin:0 }
+}
