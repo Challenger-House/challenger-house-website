@@ -935,6 +935,88 @@ h2, h3, summary, .sheet h3, .offer h3, .door h3, .face h3{ font-family:var(--hea
 /* handwritten accent (building sub-labels, casual annotations) */
 .hand{ font-family:"Caveat", cursive }
 
+/* ---- architecture: detailed house showcase (2026-07-23) ---- */
+.house-showcase{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);
+  gap:56px; align-items:center;
+  margin-top:8px;
+}
+.house-art{
+  border:1px solid var(--line-mid);
+  background:var(--paper-2);
+  background-image:repeating-linear-gradient(45deg, transparent 0 7px, rgba(28,26,22,.04) 7px 8px);
+  padding:22px; display:flex; justify-content:center;
+}
+.house-art img{ width:100%; max-width:420px; height:auto }
+.house-levels{ display:grid; gap:0; border-top:1px solid var(--line-mid) }
+.house-levels .level{
+  padding:22px 0; border-bottom:1px solid var(--line-soft);
+}
+.house-levels .lvl-mono{
+  font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--ink); display:inline-block;
+}
+.house-levels .lvl-hand{
+  font-family:"Caveat", cursive; font-size:22px; color:var(--accent-deep);
+  margin-left:12px; line-height:1;
+}
+.house-levels .level p{
+  font-family:var(--sans); font-size:15.5px; line-height:1.6; color:var(--ink-soft);
+  margin-top:9px; max-width:46ch;
+}
+@media (max-width:860px){
+  .house-showcase{ grid-template-columns:1fr; gap:30px }
+  .house-art img{ max-width:340px }
+}
+
+/* ---- architecture: point-of-view manifesto list ---- */
+.pov-list{ display:grid; gap:0; border-top:1px solid var(--line-mid); margin-top:6px }
+.pov-item{
+  display:grid; grid-template-columns:120px 1fr; gap:40px;
+  padding:38px 0; border-bottom:1px solid var(--line-mid);
+}
+.pov-item .pov-no{
+  font-family:var(--mono); font-size:12px; letter-spacing:.14em; color:var(--accent-deep);
+  padding-top:6px;
+}
+.pov-item h3{ font-family:var(--head); font-size:clamp(22px,2.4vw,29px); line-height:1.12; margin-bottom:12px }
+.pov-item h3 .why{
+  font-family:var(--mono); font-size:.62em; letter-spacing:.08em;
+  background:var(--accent); color:var(--paper); padding:1px 8px; vertical-align:middle;
+}
+.pov-item p{ font-family:var(--sans); font-size:17px; line-height:1.72; color:var(--ink); max-width:64ch }
+.pov-item p + p{ margin-top:12px }
+.fourp-box{
+  display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 14px;
+}
+.fourp-box span{
+  font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase;
+  border:1px solid var(--line-mid); padding:7px 13px; color:var(--ink-soft); background:var(--paper);
+}
+.fourp-box span b{ color:var(--accent-deep); font-weight:600 }
+@media (max-width:680px){
+  .pov-item{ grid-template-columns:1fr; gap:12px; padding:30px 0 }
+}
+
+/* ---- architecture: The Brief download block ---- */
+.brief-block{
+  border:1px solid var(--line);
+  background:var(--paper);
+  background-image:repeating-linear-gradient(45deg, transparent 0 7px, rgba(28,26,22,.035) 7px 8px);
+  padding:44px 42px;
+  display:grid; grid-template-columns:1fr auto; gap:40px; align-items:center;
+}
+.brief-block .brief-copy h3{ font-family:var(--head); font-size:clamp(24px,2.6vw,32px); margin-bottom:12px }
+.brief-block .brief-copy p{ font-family:var(--sans); font-size:16px; line-height:1.7; color:var(--ink-soft); max-width:56ch }
+.brief-meta{
+  font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--ink-soft); margin-top:16px;
+}
+@media (max-width:760px){
+  .brief-block{ grid-template-columns:1fr; gap:26px; padding:34px 26px }
+}
+
 /* ---- founder profiles: people-led builders page (2026-07-23) ---- */
 .profiles{ border-top:1px solid var(--line-mid) }
 .profile{
