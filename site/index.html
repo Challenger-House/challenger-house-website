@@ -13,13 +13,12 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<p class="edge-index" aria-hidden="true">INDEX: 01-PURPOSE // 02-CLIENTS // 03-INSIGHT // 04-SUITE // 05-MIRROR // 06-BUILDERS // 07-CONTACT</p>
 <p class="coords" aria-hidden="true">X:0000 Y:0000</p>
 
 <header class="site-head">
   <div class="wrap">
     <div class="head-top">
-      <a class="mark" href="index.html" aria-label="Challenger House — home"><span class="mark-box">C</span></a>
+      <a class="mark" href="index.html" aria-label="Challenger House — home"><img class="mark-logo" src="assets/images/CH-house-logo-new.png" alt="Challenger House"></a>
       <div class="wordmark">
         <a href="index.html">Challenger<br>House</a>
         <p class="word-sub">Organisational Architects</p>
@@ -41,7 +40,7 @@
 <section class="hero">
   <div class="wrap">
     <div class="hero-grid">
-      <h1 class="hero-title">AI doesn&rsquo;t transform your organisation. <em>It reveals it.</em></h1>
+      <h1 class="hero-title">AI doesn&rsquo;t transform your organisation.<br><em>It reveals it.</em></h1>
       <div class="hero-copy">
         <p class="sub">We rebuild what it reveals. Start with one day, on your real work.</p>
         <p class="pain">Because what AI finds first is your messy middle: undocumented workflows, invisible handovers, knowledge locked in heads. The part no org chart shows, and no licence fixes.</p>
@@ -55,24 +54,37 @@
             <title id="fig11">Hand-drawn cutaway of an office building: tacit knowledge in the attic, the organisational shadow in the basement, the messy middle on every floor between.</title>
             <image href="assets/images/building-cutaway.png" x="226" y="10" width="848" height="1264"/>
             <g stroke="currentColor" fill="none" stroke-width="1.5">
-              <path d="M340 252 H40" opacity=".55"/>
-              <path d="M1010 730 H1262" opacity=".55"/>
-              <path d="M492 1190 H40" opacity=".55"/>
+              <path d="M344 252 H175" opacity=".55"/>
+              <path d="M1006 730 H1120" opacity=".55"/>
+              <path d="M496 1190 H175" opacity=".55"/>
+              <!-- divider rule between the mono cap and the handwritten note -->
+              <path d="M40 256 H175" opacity=".5"/>
+              <path d="M1120 734 H1262" opacity=".5"/>
+              <path d="M40 1168 H175" opacity=".5"/>
             </g>
             <g fill="currentColor">
               <circle cx="344" cy="252" r="5"/>
               <circle cx="1006" cy="730" r="5"/>
               <circle cx="496" cy="1190" r="5"/>
             </g>
-            <g fill="currentColor" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="21" letter-spacing="4">
-              <text x="38" y="216">THE ATTIC</text>
-              <text x="38" y="250" font-family="Caveat, cursive" font-size="31" letter-spacing="1" opacity=".78">tacit knowledge</text>
+            <g fill="currentColor" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="27" letter-spacing="4">
+              <text x="40" y="240">THE ATTIC</text>
               <text x="1262" y="718" text-anchor="end">THE MESSY MIDDLE</text>
-              <text x="1262" y="752" text-anchor="end" font-family="Caveat, cursive" font-size="31" letter-spacing="1" opacity=".78">broken handovers</text>
-              <text x="38" y="1154">THE BASEMENT</text>
-              <text x="38" y="1188" font-family="Caveat, cursive" font-size="31" letter-spacing="1" opacity=".78">organisational shadow</text>
+              <text x="40" y="1152">THE BASEMENT</text>
+            </g>
+            <g fill="currentColor" font-family="Caveat, cursive" font-size="41" letter-spacing="1" opacity=".82">
+              <text x="40" y="304">tacit</text>
+              <text x="40" y="348">knowledge</text>
+              <text x="1262" y="782" text-anchor="end">broken</text>
+              <text x="1262" y="826" text-anchor="end">handovers</text>
+              <text x="40" y="1216">organisational</text>
+              <text x="40" y="1260">shadow</text>
             </g>
           </svg>
+          <div class="hm-labels" aria-hidden="true">
+            <div class="hm-l hm-top"><span class="hm-mono">THE ATTIC</span><span class="hm-hand hand">tacit knowledge</span></div>
+            <div class="hm-l hm-bot"><span class="hm-mono">THE BASEMENT</span><span class="hm-hand hand">organisational shadow</span></div>
+          </div>
       </div>
     </div>
   </div>
@@ -99,15 +111,16 @@
       <li><span>They see AI adoption as a <strong>complex change process</strong>, not a complicated project that can be delegated away. This is a top leadership job.</span></li>
       <li><span>They are <strong>done talking about frontier AI</strong>. They want to experiment with it. And they need the business case to <strong>go beyond Copilot</strong>, because despite their best will and effort, it is limiting them daily.</span></li>
     </ul>
-    <p class="big-invite">Recognise yourself? Then you&rsquo;re ready for a day that proves it. <a class="think-link" href="experience.html">Your 1-Day Experience &rarr;</a></p>
-    <div class="panel panel-accent mt-3">
-      <p class="body"><strong>A filter, stated plainly.</strong> If your executive team cannot give this one day of undivided attention, we are the wrong call. Undivided time is the intervention, and what a leadership team makes time for is the signal everyone else reads.</p>
-    </div>
+    <p class="big-invite">Recognise yourself? Then you&rsquo;re ready for a day that proves it. <a class="think-link invite-link" href="experience.html">Your 1-Day Experience &rarr;</a></p>
+    <a class="signpost mt-3" href="#insight">
+      <span class="sp-label"><span class="arrow">&darr;</span> Why most AI spend misses its ROI</span>
+      <p>Leaders who never actually sit with AI, for real stretches, on their own work, cannot make good decisions about it. That is why so much AI spend never lands: the people deciding do not yet understand it themselves.</p>
+    </a>
   </div>
 </section>
 
 <!-- 04 / THE INSIGHT-->
-<section>
+<section id="insight">
   <div class="wrap">
     <p class="zone"><span class="ztext">Zone 03 / The insight</span></p>
     <h2 class="mb-2">The imagination gap.</h2>
@@ -170,9 +183,9 @@
     </div>
     <div class="fcta mt-3">
       <a class="btn-outline" href="https://calendly.com/marcusdruen/challenger-house-intro-call">Book your free hour</a>
-      <p class="free-note">Your first hour, the Drawing Board or the Walkthrough, costs nothing but attention. Everything above it is paid work.</p>
+      <p class="free-note">Your free hour comes two ways. The <strong>Drawing Board</strong> is one to one, for a leader who wants to go first. The <strong>Walkthrough</strong> is one hour with your team, to excite, inspire and open eyes. Both cost nothing but attention. Everything above them is paid work.</p>
     </div>
-    <p class="compound center mt-4">AI adoption doesn&rsquo;t compound in individuals. <em>It compounds in teams.</em></p>
+    <p class="compound center mt-4">What you build this quarter compounds in 2027. <em>By 2028, the gap is exponential.</em></p>
   </div>
 </section>
 
@@ -194,11 +207,6 @@
     <p class="zone"><span class="ztext">Zone 06 / Who we are</span></p>
     <h2 class="mb-2">Builders, not consultants.</h2>
     <p class="lead" style="max-width:74ch">Bridge builders to the AI frontier. Community builders inside large organisations. Product builders, online and offline. Three operators, one shared mission: new organisational architectures for a post-AI world.</p>
-    <p class="body soft mt-2" style="max-width:74ch">Three decades of systemic organisational development, facilitation and venture building, now applied to the AI transition. That heritage is the foundation, not a recent addition.</p>
-    <p class="label mt-3 mb-1 soft">We have previously worked with</p>
-    <div class="logos">
-      <span>Deutsche Telekom</span><span>Telefónica</span><span>Sanofi</span><span>Adobe</span><span>E.ON</span><span>Lidl</span><span>Digitalservice des Bundes</span><span>Diffferent</span><span>Xempus</span>
-    </div>
     <p class="mt-3"><a class="btn-outline" href="builders.html">Meet the builders</a></p>
   </div>
 </section>
@@ -211,7 +219,7 @@
     <p class="body soft">The 1-Day is four figures. The Sprint is five. And your first hour, the Drawing Board or the Walkthrough, costs nothing but attention. It all starts with a conversation.</p>
     <a class="btn-bar mt-2" href="https://calendly.com/marcusdruen/challenger-house-intro-call">Start Your Challenge [45 MIN]</a>
     <p class="fineprint mt-1">45 minutes with a builder, not a salesperson. Bring the problem that actually hurts. You&rsquo;ll get a straight answer, including no.</p>
-    <p class="mt-3"><a class="think-link" href="architecture.html">The Brief: the thinking behind all of this, to read or share with your team &rarr;</a></p>
+    <p class="mt-3"><a class="think-link" href="assets/the-brief.pdf" download>The Brief: the thinking behind all of this, to read or share with your team &rarr;</a></p>
   </div>
 </section>
 
@@ -227,6 +235,7 @@
         <div class="foot-links">
           <a href="faq.html">FAQ</a>
           <a href="privacy.html">Privacy</a>
+          <button type="button" class="tel-reveal">Call &rarr;</button>
         </div>
       </div>
       <div class="foot-legal-col">

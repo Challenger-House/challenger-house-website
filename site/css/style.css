@@ -123,20 +123,11 @@ strong{ font-weight:600 }
   padding-bottom:22px;
 }
 
-.mark{ text-decoration:none; color:var(--ink); display:block; margin-top:6px }
-.mark-box{
-  position:relative;
-  width:52px; height:52px;
-  border:1px solid var(--line);
-  display:flex; align-items:center; justify-content:center;
-  font-family:var(--serif); font-size:26px; font-weight:700; font-style:italic;
+.mark{ text-decoration:none; color:var(--ink); display:block; margin-top:2px }
+.mark-logo{
+  width:62px; height:62px; display:block; object-fit:contain;
+  mix-blend-mode:multiply;  /* drops the white plate over the cream paper */
 }
-/* registration crosshairs */
-.mark-box::before, .mark-box::after{
-  content:""; position:absolute; background:var(--line-mid);
-}
-.mark-box::before{ left:-12px; right:-12px; top:50%; height:1px }
-.mark-box::after{ top:-12px; bottom:-12px; left:50%; width:1px }
 
 .wordmark{ text-align:right }
 .wordmark a{
@@ -181,9 +172,9 @@ strong{ font-weight:600 }
 }
 .site-nav .nav-cta{
   margin-left:auto;
-  border:1px solid var(--ink);
+  border:1px solid var(--btn);
   padding:6px 14px;
-  background:var(--ink); color:var(--paper);
+  background:var(--btn); color:var(--paper);
 }
 .site-nav .nav-cta:hover{ background:var(--accent-deep); border-color:var(--accent-deep); color:var(--paper) }
 
@@ -222,11 +213,11 @@ section.tight{ padding:44px 0 }
 
 .btn-bar{
   display:block; width:100%;
-  background:var(--ink); color:var(--paper);
+  background:var(--btn); color:var(--paper);
   text-align:center; text-decoration:none;
   font-family:var(--mono); font-size:12px; letter-spacing:.28em; text-transform:uppercase;
   padding:18px 20px;
-  border:1px solid var(--ink);
+  border:1px solid var(--btn);
   transition:background .15s ease;
 }
 .btn-bar:hover{ background:var(--accent-deep); border-color:var(--accent-deep) }
@@ -784,6 +775,7 @@ footer{ padding:80px 0 60px }
   --ink:#1C1A16; --ink-soft:#5A5750;
   --accent:#146B5C; --accent-deep:#0F5B4E;
   --accent-soft:rgba(20,107,92,.08); --accent-line:rgba(20,107,92,.42);
+  --btn:#4A453D;   /* softened button tone: warm dark stone, not hard black */
   --sans:"IBM Plex Sans", system-ui, -apple-system, sans-serif;
 }
 p.lead, .hero .sub{ font-family:var(--sans); font-size:18px; line-height:1.7; font-weight:400 }
@@ -934,6 +926,40 @@ h2, h3, summary, .sheet h3, .offer h3, .door h3, .face h3{ font-family:var(--hea
 @media (max-width:820px){ .foot-legal-col{ text-align:left; margin-top:20px } }
 /* handwritten accent (building sub-labels, casual annotations) */
 .hand{ font-family:"Caveat", cursive }
+
+/* desktop-only forced line break (statements break on desktop, reflow on mobile) */
+@media (max-width:680px){ br.br-desk{ display:none } }
+
+/* landing: widen the "recognise yourself" invite across the page on desktop; bigger clickable link */
+.big-invite{ max-width:none }
+.big-invite .invite-link{ font-size:20px; letter-spacing:.01em; white-space:nowrap }
+@media (max-width:820px){ .big-invite .invite-link{ font-size:17px; white-space:normal } }
+
+/* sprint hero: headline | lead text side by side on desktop (ghost sits left via has-ghost) */
+.sprint-hero-grid{ display:grid; grid-template-columns:1fr 1fr; gap:52px; align-items:start }
+.sprint-hero-grid .lead{ margin-top:6px }
+@media (max-width:900px){ .sprint-hero-grid{ grid-template-columns:1fr; gap:22px } }
+
+/* landing hero house: mobile labels (desktop uses the in-SVG labels) */
+.hm-labels{ display:none }
+@media (max-width:1020px){
+  .hero-media{ position:relative }
+  .hm-labels{ display:block }
+  .hm-l{ position:absolute; left:2px; z-index:3 }
+  .hm-top{ top:0 }
+  .hm-bot{ bottom:2px }
+  .hm-mono{ display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink) }
+  .hm-hand{ display:block; font-family:"Caveat",cursive; font-size:23px; line-height:1; color:var(--accent-deep); margin-top:1px }
+}
+
+/* click-to-reveal phone (footer + contacts) — bots can't scrape the number */
+.tel-reveal{
+  font-family:var(--mono); font-size:11px; letter-spacing:.06em;
+  color:var(--accent-deep); background:none; border:none; cursor:pointer;
+  padding:0; text-decoration:underline; text-underline-offset:3px;
+}
+.tel-reveal:hover{ color:var(--ink) }
+.foot-links .tel-reveal{ letter-spacing:.02em }
 
 /* ---- architecture: detailed house showcase (2026-07-23) ---- */
 .house-showcase{

@@ -76,3 +76,21 @@
   }
   if (document.body) build(); else document.addEventListener('DOMContentLoaded', build);
 })();
+
+// Click-to-reveal phone. The number is assembled in JS at click time, so it is
+// not sitting in the static HTML as a plain tel: link for scrapers to harvest.
+(function () {
+  var btns = document.querySelectorAll('.tel-reveal');
+  if (!btns.length) return;
+  var display = '+44 7947 484882';
+  var dial = '+447947484882';
+  Array.prototype.forEach.call(btns, function (btn) {
+    btn.addEventListener('click', function () {
+      var a = document.createElement('a');
+      a.href = 'tel:' + dial;
+      a.textContent = display;
+      a.className = btn.className + ' tel-live';
+      btn.parentNode.replaceChild(a, btn);
+    }, { once: true });
+  });
+})();
