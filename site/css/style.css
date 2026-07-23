@@ -885,3 +885,7 @@ h2, h3, summary, .sheet h3, .offer h3, .door h3, .face h3{ font-family:var(--hea
 .exp-hero{ display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center }
 .exp-hero-media img{ width:100%; height:auto; display:block }
 @media (max-width:820px){ .exp-hero{ grid-template-columns:1fr; gap:24px } }
+
+/* hero call-to-action pair (landing) */
+.hero-cta{ display:flex; flex-wrap:wrap; gap:14px; align-items:center; margin:22px 0 8px }
+.hero-cta .btn-bar{ width:auto; padding:16px 30px }
