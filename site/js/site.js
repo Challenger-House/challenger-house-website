@@ -46,3 +46,33 @@
   });
   calc();
 })();
+
+// Cookie / consent banner (GDPR + UK GDPR). The site sets no non-essential
+// cookies today; this records the visitor's choice and is the gate for any
+// future analytics: only load them when getConsent() === 'accepted'.
+(function () {
+  var KEY = 'ch-consent';
+  function getConsent() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function setConsent(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+  // if analytics are added later, call them here when getConsent() === 'accepted'
+  if (getConsent()) return; // choice already made
+
+  function build() {
+    if (document.querySelector('.cookie-banner')) return;
+    var b = document.createElement('div');
+    b.className = 'cookie-banner';
+    b.setAttribute('role', 'dialog');
+    b.setAttribute('aria-label', 'Cookie consent');
+    b.innerHTML =
+      '<p class="cb-text">We set no marketing or analytics cookies. We do load our fonts from Google, which shares your IP with Google. Accept, or decline non-essential processing. See our <a href="privacy.html">Privacy &amp; Cookies</a> notice.</p>' +
+      '<div class="cb-actions">' +
+      '<button type="button" class="cb-btn cb-decline">Decline non-essential</button>' +
+      '<button type="button" class="cb-btn cb-accept">Accept</button>' +
+      '</div>';
+    document.body.appendChild(b);
+    function close(choice) { setConsent(choice); b.parentNode && b.parentNode.removeChild(b); }
+    b.querySelector('.cb-accept').addEventListener('click', function () { close('accepted'); });
+    b.querySelector('.cb-decline').addEventListener('click', function () { close('declined'); });
+  }
+  if (document.body) build(); else document.addEventListener('DOMContentLoaded', build);
+})();
