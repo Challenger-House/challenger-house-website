@@ -1,0 +1,8 @@
+# Challenger House website — Netlify continuous deployment config.
+# Static site, hand-written HTML, no build step. Publish the contents of site/.
+# With this file present, linking the GitHub repo in Netlify auto-detects the
+# correct settings, so a push to `main` publishes automatically.
+
+[build]
+  publish = "site"
+  command = ""
