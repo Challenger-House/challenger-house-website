@@ -951,11 +951,36 @@ h2, h3, summary, .sheet h3, .offer h3, .door h3, .face h3{ font-family:var(--hea
 }
 .arch-index a:hover{ color:var(--accent-deep) }
 .arch-index .ai-label{ color:var(--accent-deep) }
-/* anchored sections clear the sticky nav + index */
-main [id^="arch-"]{ scroll-margin-top:132px }
+/* anchored sections clear the (non-sticky) header */
+main [id^="arch-"]{ scroll-margin-top:24px }
 @media (max-width:820px){
   .arch-index{ position:static; top:auto; padding:12px 28px }
-  main [id^="arch-"]{ scroll-margin-top:20px }
+  main [id^="arch-"]{ scroll-margin-top:16px }
+}
+
+/* architecture: descriptive signpost list (replaces the sticky tab index) */
+.arch-lead{
+  font-family:var(--head); font-weight:600; font-size:clamp(20px,2.2vw,26px);
+  line-height:1.25; color:var(--ink); max-width:60ch; margin-bottom:6px;
+}
+.arch-guide-list{ display:grid; gap:0; border-top:1px solid var(--line-mid); margin-top:6px }
+.arch-guide-row{
+  display:grid; grid-template-columns:220px 1fr 24px; gap:24px; align-items:baseline;
+  padding:16px 6px 16px 0; border-bottom:1px solid var(--line-soft);
+  text-decoration:none; color:var(--ink); transition:background .15s, padding .15s;
+}
+.arch-guide-row b{ font-family:var(--head); font-weight:600; font-size:19px; color:var(--ink) }
+.arch-guide-row b.ai-label{ color:var(--accent-deep) }
+.arch-guide-row > span{ font-family:var(--sans); font-size:16px; line-height:1.55; color:var(--ink-soft) }
+.arch-guide-row .ar{ font-family:var(--mono); font-size:15px; color:var(--accent-deep); justify-self:end; transition:transform .15s }
+.arch-guide-row:hover{ background:var(--accent-soft); padding-left:12px }
+.arch-guide-row:hover b{ color:var(--accent-deep) }
+.arch-guide-row:hover .ar{ transform:translateY(3px) }
+@media (max-width:640px){
+  .arch-guide-row{ grid-template-columns:1fr 24px; gap:6px 16px; padding:14px 0 }
+  .arch-guide-row b{ grid-column:1 }
+  .arch-guide-row > span{ grid-column:1 }
+  .arch-guide-row .ar{ grid-column:2; grid-row:1 }
 }
 
 /* free-hour modes: Drawing Board / Walkthrough as bookable features */
