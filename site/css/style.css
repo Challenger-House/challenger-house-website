@@ -935,6 +935,26 @@ h2, h3, summary, .sheet h3, .offer h3, .door h3, .face h3{ font-family:var(--hea
 .big-invite .invite-link{ font-size:20px; letter-spacing:.01em; white-space:nowrap }
 @media (max-width:820px){ .big-invite .invite-link{ font-size:17px; white-space:normal } }
 
+/* architecture: sticky in-page index (the deep-tab menu) */
+.arch-index{
+  position:sticky; top:66px; z-index:40;
+  background:var(--paper);
+  border-top:1px solid var(--line-soft); border-bottom:1px solid var(--line-mid);
+  display:flex; flex-wrap:wrap; gap:6px 22px; padding:11px 32px; margin:0;
+}
+.arch-index a{
+  font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--ink-soft); text-decoration:none; white-space:nowrap;
+}
+.arch-index a:hover{ color:var(--accent-deep) }
+.arch-index .ai-label{ color:var(--accent-deep) }
+/* anchored sections clear the sticky nav + index */
+main [id^="arch-"]{ scroll-margin-top:132px }
+@media (max-width:820px){
+  .arch-index{ position:static; top:auto; padding:12px 28px }
+  main [id^="arch-"]{ scroll-margin-top:20px }
+}
+
 /* free-hour modes: Drawing Board / Walkthrough as bookable features */
 .free-modes{ display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:22px }
 .free-mode{ border-top:2px solid var(--accent); padding-top:14px }
