@@ -1213,3 +1213,18 @@ main [id^="arch-"]{ scroll-margin-top:24px }
 .ladder-triad{ display:grid; gap:7px; margin:22px 0 6px; max-width:72ch }
 .ladder-triad p{ font-family:var(--sans); font-size:16px; line-height:1.5; color:var(--ink-soft); margin:0 }
 .ladder-triad strong{ font-family:var(--head); font-weight:600; color:var(--ink) }
+
+/* --- Batch 2 additions --- */
+/* suite: per-card payoff kicker (folded triad) */
+.offer-kicker{ font-family:var(--mono); font-size:11px; letter-spacing:.02em; line-height:1.5; color:var(--ink-soft); margin-top:16px; padding-top:13px; border-top:1px solid var(--line-soft); text-transform:none }
+/* suite: bold action tag */
+.offer-head strong{ font-weight:700 }
+/* free-hour single description block */
+.free-block{ font-family:var(--sans); font-size:16px; line-height:1.62; color:var(--ink); max-width:72ch; margin:0 0 4px }
+/* standalone statement breathing room (experience knowing/judgment lines) */
+.stmt-space{ margin-top:54px; margin-bottom:54px }
+@media (max-width:680px){ .stmt-space{ margin-top:28px; margin-bottom:28px } }
+/* experience: "Five effects. One result." callout, distinct from the SV cards */
+.five-one{ border-left:3px solid var(--accent); padding:2px 0 2px 22px; margin:30px 0; max-width:76ch }
+.five-one .fh{ font-family:var(--head); font-weight:600; font-size:clamp(19px,2.2vw,24px); line-height:1.1; margin-bottom:9px; color:var(--ink) }
+.five-one p{ font-family:var(--sans); font-size:16px; line-height:1.6; color:var(--ink-soft); margin:0 }
