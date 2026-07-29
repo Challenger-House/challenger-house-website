@@ -21,7 +21,7 @@ So much AI spend never lands because the people deciding have not sat with it th
 
 - **One hour (free):** See what is possible, on your real problem, live. The Drawing Board (1:1) or the Walkthrough (your team).
 - **One day (four figures) — the 1-Day Experience:** Your leadership team takes one real piece of work and rebuilds it with frontier AI live in the room. The door into everything else.
-- **One quarter (five figures) — the Sprint:** Three months wrapped around a three-day Residency, so capability and results compound and the new way of working survives Monday.
+- **One quarter (five figures) — The Build:** Three months wrapped around a three-day Residency, so capability and results compound and the new way of working survives Monday.
 
 Everything above zero compounds. Start with a free 1:1 AI coaching with one of us.
 
