@@ -1208,3 +1208,8 @@ main [id^="arch-"]{ scroll-margin-top:24px }
   .profile .p-photo{ width:136px; height:136px; margin-bottom:20px }
   .profile .p-aside .links{ flex-direction:row; flex-wrap:wrap; gap:18px }
 }
+
+/* landing suite: the three-line ladder triad (see it / experience it / build it) */
+.ladder-triad{ display:grid; gap:7px; margin:22px 0 6px; max-width:72ch }
+.ladder-triad p{ font-family:var(--sans); font-size:16px; line-height:1.5; color:var(--ink-soft); margin:0 }
+.ladder-triad strong{ font-family:var(--head); font-weight:600; color:var(--ink) }
