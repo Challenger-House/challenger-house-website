@@ -416,6 +416,11 @@ section.tight{ padding:44px 0 }
 .signpost p{ font-size:13px; color:var(--ink-soft) }
 .signpost:hover .sp-label{ color:var(--ink) }
 .signpost:hover p{ color:var(--ink) }
+/* mobile: narrow the block and balance the space above the label with the
+   space below "One client, unscripted." so it no longer reads top-heavy */
+@media (max-width:680px){
+  .signpost{ margin-top:26px; padding-top:15px; padding-bottom:15px; max-width:46ch }
+}
 
 /* ---------- the suite: house / floors / doors ---------- */
 
@@ -805,7 +810,7 @@ main > section:nth-of-type(even){
   /* show the building drawing prominently instead of the sparse absolute SVG */
   .hero-media svg{ display:none }
   .hero-media{
-    background:url('../assets/images/house-missing-middle.png') center top / contain no-repeat;
+    background:url('../assets/images/house-missing-middle.webp') center top / contain no-repeat;
     aspect-ratio:1086 / 1448;
     width:100%; max-width:420px; margin:8px auto 0;
   }
@@ -1018,11 +1023,23 @@ main [id^="arch-"]{ scroll-margin-top:24px }
 /* landing hero house: mobile labels (desktop uses the in-SVG labels) */
 .hm-labels{ display:none }
 @media (max-width:1020px){
-  .hero-media{ position:relative }
+  /* reserve air above and below the drawing so the attic/basement labels
+     bracket the image instead of bleeding into it */
+  .hero-media{ position:relative; margin-top:56px; margin-bottom:60px }
   .hm-labels{ display:block }
   .hm-l{ position:absolute; left:2px; z-index:3 }
-  .hm-top{ top:0 }
-  .hm-bot{ bottom:2px }
+  /* attic sits above the top edge, basement fully below the bottom edge */
+  .hm-top{ top:auto; bottom:calc(100% + 12px) }
+  .hm-bot{ top:calc(100% + 14px); bottom:auto }
+  /* missing middle: a translucent cream card laid over the empty floors */
+  .hm-mid{
+    left:50%; transform:translateX(-50%);
+    top:45%;
+    text-align:center;
+    background:rgba(242,240,234,.66);   /* --paper cream at ~66% */
+    padding:7px 14px;
+    box-shadow:0 0 0 1px var(--line-soft);
+  }
   .hm-mono{ display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink) }
   .hm-hand{ display:block; font-family:"Caveat",cursive; font-size:23px; line-height:1; color:var(--accent-deep); margin-top:1px }
 }
