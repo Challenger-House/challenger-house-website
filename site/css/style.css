@@ -330,6 +330,27 @@ section.tight{ padding:44px 0 }
   .sheet-grid.c2, .sheet-grid.c4{ grid-template-columns:1fr }
 }
 
+/* imagination-gap carousel: 3-up grid on desktop, swipeable one-up on mobile */
+.insight-carousel{ position:relative }
+.ic-dots{ display:none }
+@media (max-width:1020px){
+  .insight-carousel .insight-cards{
+    display:flex; gap:16px; overflow-x:auto;
+    scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch;
+    scrollbar-width:none; padding-bottom:2px;
+  }
+  .insight-carousel .insight-cards::-webkit-scrollbar{ display:none }
+  .insight-carousel .insight-cards > .sheet{ flex:0 0 84%; scroll-snap-align:center }
+  .ic-dots{ display:flex; justify-content:center; gap:10px; margin-top:20px }
+  .ic-dot{
+    width:9px; height:9px; border-radius:50%; padding:0; cursor:pointer;
+    background:transparent; border:1px solid var(--line-mid);
+    -webkit-appearance:none; appearance:none;
+  }
+  .ic-dot.active{ background:var(--accent-deep); border-color:var(--accent-deep) }
+  .ic-dot:focus-visible{ outline:2px solid var(--accent); outline-offset:2px }
+}
+
 /* ---------- lists ---------- */
 
 .tribe-list{ list-style:none; counter-reset:tribe }

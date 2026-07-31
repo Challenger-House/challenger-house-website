@@ -77,6 +77,46 @@
   if (document.body) build(); else document.addEventListener('DOMContentLoaded', build);
 })();
 
+// Imagination-gap carousel. On mobile the three cards become a swipeable strip;
+// these dots track the swipe position and jump to a card when tapped. Desktop
+// keeps the 3-up grid, where the dots are hidden and this is a no-op.
+(function () {
+  var car = document.querySelector('.insight-carousel');
+  if (!car) return;
+  var track = car.querySelector('.insight-cards');
+  var cards = track ? track.querySelectorAll('.sheet') : [];
+  var dots = car.querySelectorAll('.ic-dot');
+  if (!track || !cards.length || !dots.length) return;
+  function activeIndex() {
+    var tr = track.getBoundingClientRect();
+    var mid = tr.left + tr.width / 2;
+    var best = 0, bestD = Infinity;
+    Array.prototype.forEach.call(cards, function (c, i) {
+      var r = c.getBoundingClientRect();
+      var d = Math.abs(r.left + r.width / 2 - mid);
+      if (d < bestD) { bestD = d; best = i; }
+    });
+    return best;
+  }
+  function sync() {
+    var idx = activeIndex();
+    Array.prototype.forEach.call(dots, function (d, i) {
+      d.classList.toggle('active', i === idx);
+    });
+  }
+  var raf;
+  track.addEventListener('scroll', function () {
+    if (raf) return;
+    raf = window.requestAnimationFrame(function () { raf = 0; sync(); });
+  }, { passive: true });
+  Array.prototype.forEach.call(dots, function (d, i) {
+    d.addEventListener('click', function () {
+      cards[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    });
+  });
+  sync();
+})();
+
 // Click-to-reveal phone. The number is assembled in JS at click time, so it is
 // not sitting in the static HTML as a plain tel: link for scrapers to harvest.
 (function () {
