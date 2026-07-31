@@ -77,44 +77,33 @@
   if (document.body) build(); else document.addEventListener('DOMContentLoaded', build);
 })();
 
-// Imagination-gap carousel. On mobile the three cards become a swipeable strip;
-// these dots track the swipe position and jump to a card when tapped. Desktop
-// keeps the 3-up grid, where the dots are hidden and this is a no-op.
+// Imagination-gap self-locator. The reader picks the stage that sounds like them;
+// each stage reveals a line and the trigger that moves them to the next one.
 (function () {
-  var car = document.querySelector('.insight-carousel');
-  if (!car) return;
-  var track = car.querySelector('.insight-cards');
-  var cards = track ? track.querySelectorAll('.sheet') : [];
-  var dots = car.querySelectorAll('.ic-dot');
-  if (!track || !cards.length || !dots.length) return;
-  function activeIndex() {
-    var tr = track.getBoundingClientRect();
-    var mid = tr.left + tr.width / 2;
-    var best = 0, bestD = Infinity;
-    Array.prototype.forEach.call(cards, function (c, i) {
-      var r = c.getBoundingClientRect();
-      var d = Math.abs(r.left + r.width / 2 - mid);
-      if (d < bestD) { bestD = d; best = i; }
-    });
-    return best;
+  var loc = document.querySelector('.locator');
+  if (!loc) return;
+  var stages = loc.querySelectorAll('.loc-stage');
+  var body = loc.querySelector('#loc-body');
+  var move = loc.querySelector('#loc-move');
+  if (!stages.length || !body || !move) return;
+  var data = [
+    { b: 'Copilot drafts your emails, and that is the ceiling of what you can picture. You do not yet know what you are missing.', m: 'You move up the moment you watch AI rebuild a workflow that is actually yours.' },
+    { b: 'You have seen it on your own work. Now the questions get specific: which workflows are exposed, where judgment stays human, who owns adoption.', m: 'You move up when your team can run the new way of working without us in the room.' },
+    { b: 'It is simply how the team works now. The capability stays, because you built it rather than bought it.', m: 'This is where the quarter takes you.' }
+  ];
+  function sel(i) {
+    for (var j = 0; j < stages.length; j++) {
+      stages[j].setAttribute('aria-selected', j === i ? 'true' : 'false');
+    }
+    body.textContent = data[i].b;
+    move.textContent = (i < 2 ? '↑ ' : '') + data[i].m;
   }
-  function sync() {
-    var idx = activeIndex();
-    Array.prototype.forEach.call(dots, function (d, i) {
-      d.classList.toggle('active', i === idx);
-    });
+  for (var k = 0; k < stages.length; k++) {
+    (function (btn) {
+      btn.addEventListener('click', function () { sel(+btn.getAttribute('data-i')); });
+    })(stages[k]);
   }
-  var raf;
-  track.addEventListener('scroll', function () {
-    if (raf) return;
-    raf = window.requestAnimationFrame(function () { raf = 0; sync(); });
-  }, { passive: true });
-  Array.prototype.forEach.call(dots, function (d, i) {
-    d.addEventListener('click', function () {
-      cards[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-    });
-  });
-  sync();
+  sel(0);
 })();
 
 // Click-to-reveal phone. The number is assembled in JS at click time, so it is
