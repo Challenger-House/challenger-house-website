@@ -87,9 +87,9 @@
   var move = loc.querySelector('#loc-move');
   if (!stages.length || !body || !move) return;
   var data = [
-    { b: 'Copilot drafts your emails, and that is the ceiling of what you can picture. You do not yet know what you are missing.', m: 'You move up the moment you watch AI rebuild a workflow that is actually yours.' },
-    { b: 'You have seen it on your own work. Now the questions get specific: which workflows are exposed, where judgment stays human, who owns adoption.', m: 'You move up when your team can run the new way of working without us in the room.' },
-    { b: 'It is simply how the team works now. The capability stays, because you built it rather than bought it.', m: 'This is where the quarter takes you.' }
+    { b: 'You have seen Copilot draft an email, and that is the ceiling of what you can ask for. The constraint is not budget or talent, it is imagination.', m: 'You move up the moment you see the delta: a frontier model doing something Copilot never could, on work that looks like yours.' },
+    { b: 'Now the questions get sharp: which workflows carry the best return, the clearest use case, the shortest path to live. The business case starts to take its own shape.', m: 'You move up when your team can run the new way of working without us in the room.' },
+    { b: 'It is simply how the team works now. The capability stays, because you built it rather than bought it.', m: 'This is sovereignty, earned only by doing the work.' }
   ];
   function sel(i) {
     for (var j = 0; j < stages.length; j++) {

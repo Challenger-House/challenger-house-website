@@ -151,18 +151,18 @@
     <p class="lead soft mb-3" style="max-width:80ch">Nobody asks AI for something they have never seen it do. See more, and you ask for more.</p>
     <div class="locator" id="locator">
       <p class="loc-prompt">Most people have only ever seen Copilot. That is the start of the curve, not the end. Where are you?</p>
-      <div class="loc-stages" role="tablist" aria-label="Where you are on the curve">
-        <button class="loc-stage" type="button" data-i="0" role="tab" aria-selected="true">
-          <span class="loc-no">01</span>
-          <span class="loc-name">Unknown unknowns</span>
+      <div class="loc-curve" role="tablist" aria-label="Where you are on the curve">
+        <svg class="loc-line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M6,90 C32,90 68,10 94,10"/>
+        </svg>
+        <button class="loc-stage s1" type="button" data-i="0" role="tab" aria-selected="true">
+          <span class="loc-no">01</span><span class="loc-name">Unknown unknowns</span>
         </button>
-        <button class="loc-stage" type="button" data-i="1" role="tab" aria-selected="false">
-          <span class="loc-no">02</span>
-          <span class="loc-name">Known unknowns</span>
+        <button class="loc-stage s2" type="button" data-i="1" role="tab" aria-selected="false">
+          <span class="loc-no">02</span><span class="loc-name">Known unknowns</span>
         </button>
-        <button class="loc-stage" type="button" data-i="2" role="tab" aria-selected="false">
-          <span class="loc-no">03</span>
-          <span class="loc-name">Known knowns</span>
+        <button class="loc-stage s3" type="button" data-i="2" role="tab" aria-selected="false">
+          <span class="loc-no">03</span><span class="loc-name">Known knowns</span>
         </button>
       </div>
       <div class="loc-reveal" aria-live="polite">
@@ -183,8 +183,7 @@
       <div class="builder-row"><b>Community builders</b><p>Inside large organisations, because AI spreads the way trust does: person to person.</p></div>
       <div class="builder-row"><b>Product builders</b><p>Online and offline, shipping real things rather than decks about them.</p></div>
     </div>
-    <p class="body soft mt-3" style="max-width:74ch">Three builders: twenty-five years of organisational development inside Europe&rsquo;s largest corporations, deep practice in AI leadership and its cognitive effects, and a frontier operator who ships agentic systems for real teams. One mission: new organisational architectures for a post-AI world.</p>
-    <p class="compound mt-4">The knowledge economy pays for knowing, and AI just made most knowing cheap. <em>We build what stays scarce: judgment, know-how, trust. Sovereignty, earned only by doing the work.</em></p>
+    <p class="body soft mt-3" style="max-width:none;text-wrap:pretty">Three builders: twenty-five years of organisational development inside Europe&rsquo;s largest corporations, deep practice in AI leadership and its cognitive effects, and a frontier operator who ships agentic systems for real teams. One mission: new organisational architectures for a post-AI world.</p>
     <p class="mt-3"><a class="btn-outline" href="builders.html">Meet the builders</a></p>
   </div>
 </section>
