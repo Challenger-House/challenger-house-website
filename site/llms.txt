@@ -1,6 +1,6 @@
 # Challenger House
 
-> Organisational Architects for the AI transition. You run two organisations, the formal one you wrote down and the informal one that actually gets the work done, and AI only knows the first. We build the missing middle: leadership experiences where your team rebuilds its real work with frontier AI.
+> Organisational Architects for the AI transition. You run two organisations, the formal one you wrote down and the informal one that actually gets the work done, and AI can only work with the one you can describe. We build the missing middle: leadership experiences where your team rebuilds its real work with frontier AI.
 
 Challenger House helps CEOs and leadership teams get real ROI from AI by treating adoption as organisational development, not a tool rollout. The first wave of AI (licences, productivity demos) is over; the hard part is that AI runs on how your organisation actually works, and most of that was never written down. What AI reveals first is the "missing middle": who checks the output, who decides when the machine and the expert disagree, who is accountable for the learning loops. No org chart shows it and no licence builds it. That is the part we build.
 
@@ -16,7 +16,7 @@ We are three operators (Marcus Druen, André Cramer, Brittney Bean) with three d
 
 - The imagination gap: leaders cannot act on capabilities they have never experienced, and for most leadership teams AI means Copilot, so the ambition starts too low.
 - The decision gap: transactional work already runs at machine speed while decisions still travel through meetings, decks and handovers. Management has been digitised, never redesigned.
-- The operating gap: the formal organisation describes the work, the informal one gets it done, and AI has only ever been shown the first. That is why licences sit idle and pilots die in meetings.
+- The operating gap: the formal organisation describes the work, the informal one gets it done, and every AI you deploy runs on the first and breaks against the second. That is why licences sit idle and pilots die in meetings.
 
 ## Thinking and people
 
