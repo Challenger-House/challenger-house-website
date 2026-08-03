@@ -77,35 +77,6 @@
   if (document.body) build(); else document.addEventListener('DOMContentLoaded', build);
 })();
 
-// Imagination-gap self-locator. The reader picks the stage that sounds like them;
-// each stage reveals a line and the trigger that moves them to the next one.
-(function () {
-  var loc = document.querySelector('.locator');
-  if (!loc) return;
-  var stages = loc.querySelectorAll('.loc-stage');
-  var body = loc.querySelector('#loc-body');
-  var move = loc.querySelector('#loc-move');
-  if (!stages.length || !body || !move) return;
-  var data = [
-    { b: 'You have seen Copilot draft an email, and that is the ceiling of what you can ask for. The constraint is not budget or talent, it is imagination.', m: 'You move up the moment you see the delta: a frontier model doing something Copilot never could, on work that looks like yours.' },
-    { b: 'Now the questions get sharp: which workflows carry the best return, the clearest use case, the shortest path to live. The business case starts to take its own shape.', m: 'You move up when your team can run the new way of working without us in the room.' },
-    { b: 'It is simply how the team works now. The capability stays, because you built it rather than bought it.', m: 'This is sovereignty, earned only by doing the work.' }
-  ];
-  function sel(i) {
-    for (var j = 0; j < stages.length; j++) {
-      stages[j].setAttribute('aria-selected', j === i ? 'true' : 'false');
-    }
-    body.textContent = data[i].b;
-    move.textContent = (i < 2 ? '↑ ' : '') + data[i].m;
-  }
-  for (var k = 0; k < stages.length; k++) {
-    (function (btn) {
-      btn.addEventListener('click', function () { sel(+btn.getAttribute('data-i')); });
-    })(stages[k]);
-  }
-  sel(0);
-})();
-
 // Click-to-reveal phone. The number is assembled in JS at click time, so it is
 // not sitting in the static HTML as a plain tel: link for scrapers to harvest.
 (function () {

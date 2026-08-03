@@ -10,7 +10,13 @@ We are three operators (Marcus Druen, André Cramer, Brittney Bean) with three d
 
 - [The 1-Day Executive Experience](https://challenger-house.com/experience.html): A strategic working day with your leadership team on your real value stream, with frontier AI live in the room. Two reveals on a single value stream, a structural one and a human one. You leave with the courage to lead AI adoption as the adaptive challenge it is, the business case to go beyond Copilot, and greater sovereignty over the machine.
 - [The Build](https://challenger-house.com/build.html): One quarter. Three months wrapped around a three-day Residency, starting from the backlog the 1-Day produced, so capability compounds and the new way of working survives Monday. Outputs include the Org Mirror, tailored instruments, and board-ready artefacts.
-- Your first hour, free: one to one for a leader who wants to go first, or one hour with your team, on a real problem, with AI as your sparring partner.
+- Your first hour, free: a 1:1 for the leader who wants to go first, on a real problem, with AI as your sparring partner.
+
+## The three gaps we close
+
+- The imagination gap: leaders cannot act on capabilities they have never experienced, and for most leadership teams AI means Copilot, so the ambition starts too low.
+- The decision gap: transactional work already runs at machine speed while decisions still travel through meetings, decks and handovers. Management has been digitised, never redesigned.
+- The operating gap: the formal organisation describes the work, the informal one gets it done, and AI has only ever been shown the first. That is why licences sit idle and pilots die in meetings.
 
 ## Thinking and people
 
