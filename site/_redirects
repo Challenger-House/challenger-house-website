@@ -1,3 +1,9 @@
+# Old domain -> new domain. challenger-house.com is attached to this site as a
+# plain domain alias, which serves the site directly rather than redirecting,
+# so it needs an explicit host-based rule to forward it to the new primary.
+https://challenger-house.com/*      https://www.challenger.house/:splat   301!
+https://www.challenger-house.com/*  https://www.challenger.house/:splat   301!
+
 # Old Sprint URLs -> The Build
 /sprint      /build.html   301
 /sprint.html /build.html   301
