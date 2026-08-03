@@ -8,8 +8,8 @@ We are three operators (Marcus Druen, André Cramer, Brittney Bean) with three d
 
 ## The offer (one hour, one day, one quarter)
 
-- [The 1-Day Executive Experience](https://challenger-house.com/experience.html): A strategic working day with your leadership team on your real value stream, with frontier AI live in the room. Two reveals on a single value stream, a structural one and a human one. You leave with the courage to lead AI adoption as the adaptive challenge it is, the business case to go beyond Copilot, and greater sovereignty over the machine.
-- [The Build](https://challenger-house.com/build.html): One quarter. Three months wrapped around a three-day Residency, starting from the backlog the 1-Day produced, so capability compounds and the new way of working survives Monday. Outputs include the Org Mirror, tailored instruments, and board-ready artefacts.
+- [The 1-Day Executive Experience](https://www.challenger.house/experience.html): A strategic working day with your leadership team on your real value stream, with frontier AI live in the room. Two reveals on a single value stream, a structural one and a human one. You leave with the courage to lead AI adoption as the adaptive challenge it is, the business case to go beyond Copilot, and greater sovereignty over the machine.
+- [The Build](https://www.challenger.house/build.html): One quarter. Three months wrapped around a three-day Residency, starting from the backlog the 1-Day produced, so capability compounds and the new way of working survives Monday. Outputs include the Org Mirror, tailored instruments, and board-ready artefacts.
 - Your first hour, free: a 1:1 for the leader who wants to go first, on a real problem, with AI as your sparring partner.
 
 ## The three gaps we close
@@ -20,14 +20,14 @@ We are three operators (Marcus Druen, André Cramer, Brittney Bean) with three d
 
 ## Thinking and people
 
-- [Architecture, our full point of view](https://challenger-house.com/architecture.html): Why AI demands new organisational architecture. The house (attic = tacit knowledge, missing middle = the layer never built, basement = the organisational shadow), the three things that change at once, AI sovereignty and the five cognitive effects (the Plausibility Illusion), and the AI Constitution.
-- [The Builders](https://challenger-house.com/builders.html): The people behind Challenger House.
-- [The Brief (PDF)](https://challenger-house.com/assets/the-brief.pdf): The full argument in one document to read or forward, with a CEO executive summary and a bold vision for making the deal with your people unbreakable.
-- [FAQ](https://challenger-house.com/faq.html)
-- [Privacy](https://challenger-house.com/privacy.html)
+- [Architecture, our full point of view](https://www.challenger.house/architecture.html): Why AI demands new organisational architecture. The house (attic = tacit knowledge, missing middle = the layer never built, basement = the organisational shadow), the three things that change at once, AI sovereignty and the five cognitive effects (the Plausibility Illusion), and the AI Constitution.
+- [The Builders](https://www.challenger.house/builders.html): The people behind Challenger House.
+- [The Brief (PDF)](https://www.challenger.house/assets/the-brief.pdf): The full argument in one document to read or forward, with a CEO executive summary and a bold vision for making the deal with your people unbreakable.
+- [FAQ](https://www.challenger.house/faq.html)
+- [Privacy](https://www.challenger.house/privacy.html)
 
 ## Contact
 
 - Book a free intro call: https://calendly.com/marcusdruen/challenger-house-intro-call
 - Marcus Druen, Founder: hello@marcusdruen.com
-- Website: https://challenger-house.com
+- Website: https://www.challenger.house
