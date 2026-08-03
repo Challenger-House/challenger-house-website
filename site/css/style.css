@@ -421,11 +421,6 @@ section.tight{ padding:44px 0 }
 .offer.flagship .offer-head{ color:var(--accent-deep); border-bottom-color:var(--accent-line) }
 @media (max-width:960px){ .offers{ grid-template-columns:1fr } }
 
-/* hero trust strip: founder-heritage names (not a client roster), directly
-   under the CTA so proof is visible without scrolling */
-.hero-trust-label{ margin:28px 0 10px }
-.logos.hero-trust span{ font-size:10px; padding:6px 12px }
-
 /* ---------- hero signpost (scroll cue down to the proof quote) ---------- */
 
 .signpost{
@@ -838,11 +833,9 @@ p.body, .body{ font-family:var(--sans); font-size:17px; line-height:1.72 }
   .hero-beats .b1 .beat-bar{ width:22px }
   .hero-beats .b2 .beat-bar{ width:46px }
   .hero-beats .b3 .beat-bar{ width:78px }
-  /* tighten the CTA/trust/signpost stack so the button and proof both
-     clear the fold on a real phone viewport, not just an idealised one */
+  /* tighten the CTA/signpost stack so the button clears the fold on a
+     real phone viewport, not just an idealised one */
   .hero .btn-bar{ margin:12px 0 6px }
-  .hero-trust-label{ margin:14px 0 6px }
-  .logos.hero-trust{ gap:8px 10px }
   .hero .signpost{ margin-top:14px }
 }
 .sheet p, .door p, .foundation p, .face p, .offer p{ font-family:var(--sans); font-size:15px; line-height:1.7 }

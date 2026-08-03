@@ -16,7 +16,7 @@ We are three operators (Marcus Druen, André Cramer, Brittney Bean) with three d
 
 - The imagination gap: leaders cannot act on capabilities they have never experienced, and for most leadership teams AI means Copilot, so the ambition starts too low.
 - The decision gap: transactional work already runs at machine speed while decisions still travel through meetings, decks and handovers. Management has been digitised, never redesigned.
-- The operating gap: the formal organisation describes the work, the informal one gets it done, and every AI you deploy runs on the first and breaks against the second. That is why licences sit idle and pilots die in meetings.
+- The impact gap: shadow AI is already making calls inside your organisation, and nobody signed off on them. That is value you cannot see, steer, or claim as yours, the gap between the AI you approved and the AI actually running the place.
 
 ## Thinking and people
 
