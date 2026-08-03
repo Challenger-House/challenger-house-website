@@ -1059,6 +1059,27 @@ main [id^="arch-"]{ scroll-margin-top:24px }
 .builder-row p{ font-family:var(--sans); font-size:16px; line-height:1.6; color:var(--ink-soft); margin:0 }
 @media (max-width:640px){ .builder-row{ grid-template-columns:1fr; gap:4px; padding:14px 0 } }
 
+/* landing: small teaser row of the three faces, same photo treatment as the
+   full profiles on /builders (grayscale + accent ring), just smaller.
+   Named team-face/team-row, not face/face-row, to avoid colliding with the
+   older unused .face card rules still in this file. */
+.team-row{ display:flex; gap:36px; flex-wrap:wrap }
+.team-face{ margin:0; text-align:center }
+.team-face img{
+  width:92px; height:92px; border-radius:50%;
+  object-fit:cover;
+  border:1px solid var(--accent-line);
+  outline:1px solid var(--line-mid); outline-offset:5px;
+  filter:grayscale(1) contrast(1.05) sepia(.12);
+  display:block; margin:0 auto 14px;
+}
+.team-face figcaption{ font-family:var(--head); font-size:16px; color:var(--ink) }
+@media (max-width:640px){
+  .team-row{ gap:26px }
+  .team-face img{ width:76px; height:76px; outline-offset:4px; margin-bottom:11px }
+  .team-face figcaption{ font-size:15px }
+}
+
 /* sprint hero: headline | lead text side by side on desktop (ghost sits left via has-ghost) */
 .sprint-hero-grid{ display:grid; grid-template-columns:1fr 1fr; gap:52px; align-items:start }
 .sprint-hero-grid .lead{ margin-top:6px }
