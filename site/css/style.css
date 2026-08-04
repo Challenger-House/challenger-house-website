@@ -728,7 +728,7 @@ footer{ padding:80px 0 60px }
 /* "Building the missing middle" caption laid over the empty floors of the house */
 .house-caption-wash{
   position:absolute; left:0; right:0; top:41%; height:26%;
-  background:var(--accent); opacity:.18;
+  background:rgba(242,240,234,.86);
 }
 .house-caption{
   position:absolute; left:0; right:0; top:53%; transform:translateY(-50%);
