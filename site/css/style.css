@@ -133,7 +133,7 @@ strong{ font-weight:600 }
 .wordmark a{
   font-family:var(--serif);
   font-weight:800;
-  font-size:clamp(30px, 3.4vw, 46px);
+  font-size:clamp(30px, 2.6vw, 34px);
   line-height:.92;
   letter-spacing:.01em;
   color:var(--ink);
@@ -143,7 +143,7 @@ strong{ font-weight:600 }
 }
 .word-sub{
   display:inline-block;
-  margin-top:10px;
+  margin-top:5px;
   font-size:10px;
   letter-spacing:.34em;
   text-transform:uppercase;
