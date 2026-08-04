@@ -726,6 +726,10 @@ footer{ padding:80px 0 60px }
 .hero-house{ position:relative; margin:0 auto; max-width:392px }
 .hero-house img{ display:block; width:100%; height:auto }
 /* "Building the missing middle" caption laid over the empty floors of the house */
+.house-caption-wash{
+  position:absolute; left:0; right:0; top:41%; height:26%;
+  background:var(--accent); opacity:.18;
+}
 .house-caption{
   position:absolute; left:0; right:0; top:53%; transform:translateY(-50%);
   text-align:center;
