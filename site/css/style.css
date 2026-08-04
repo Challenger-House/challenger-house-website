@@ -713,9 +713,9 @@ footer{ padding:80px 0 60px }
 
 .hero{ padding:64px 0 80px }
 .hero-grid{
-  display:grid; grid-template-columns:minmax(380px, 6fr) 6fr;
+  display:grid; grid-template-columns:minmax(380px, 2fr) 1fr;
   grid-template-rows:auto auto;
-  column-gap:64px; row-gap:28px; align-items:start;
+  column-gap:56px; row-gap:28px; align-items:start;
 }
 .hero-title{ grid-column:1; grid-row:1; margin:0 }
 .hero-copy{ grid-column:1; grid-row:2 }
@@ -826,7 +826,7 @@ p.body, .body{ font-family:var(--sans); font-size:17px; line-height:1.72 }
 .hero .pain{ font-family:var(--sans); font-size:15.5px; line-height:1.68 }
 .hero .hero-offer{ font-family:var(--sans); font-size:16.5px; line-height:1.62; font-weight:600; color:var(--ink); max-width:56ch; margin:0 0 6px }
 /* hero timeline: three beats whose top marker widens with the time span (hour < day < quarter) */
-.hero-beats{ position:relative; display:flex; align-items:flex-start; flex-wrap:wrap; gap:16px 52px; margin:38px 0 30px; padding-top:3px }
+.hero-beats{ position:relative; display:flex; align-items:flex-start; flex-wrap:wrap; gap:16px 52px; margin:38px 0 50px; padding-top:3px }
 .hero-beats::before{ content:""; position:absolute; top:5px; left:1px; right:1px; height:1px; background:var(--line-mid); z-index:0 }
 .hero-beats .beat{ display:block; position:relative; z-index:1 }
 .hero-beats .beat-bar{ display:block; height:5px; border-radius:3px; background:var(--accent-deep); margin-bottom:13px }
