@@ -991,6 +991,14 @@ h2, h3, summary, .sheet h3, .offer h3, .door h3, .face h3{ font-family:var(--hea
 /* two-column outcome text was falling back to the mono body font; use the sans reading face */
 .two-col p{ font-family:var(--sans); font-size:15.5px; line-height:1.7 }
 
+/* landing v4: standalone pull line in "Who we work with", weighted like the big-invite line */
+.pull-line{ margin:20px auto; max-width:34ch }
+@media (max-width:820px){ .pull-line{ max-width:none } }
+
+/* landing v4: footnote asterisk anchoring the AI-native stat to the footer citation */
+.fn-ref{ color:var(--accent); text-decoration:none; margin-left:1px }
+.fn-ref:hover{ text-decoration:underline }
+
 /* architecture: sticky in-page index (the deep-tab menu) */
 .arch-index{
   position:sticky; top:66px; z-index:40;
