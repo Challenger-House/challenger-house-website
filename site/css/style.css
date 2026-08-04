@@ -991,15 +991,14 @@ h2, h3, summary, .sheet h3, .offer h3, .door h3, .face h3{ font-family:var(--hea
 /* two-column outcome text was falling back to the mono body font; use the sans reading face */
 .two-col p{ font-family:var(--sans); font-size:15.5px; line-height:1.7 }
 
-/* landing v4: standalone pull line in "Who we work with", weighted like the big-invite line.
-   Boxed callout treatment (not the bare display serif) so a long line reads as a
-   quoted aside rather than another headline competing with the H2 above it. */
+/* landing v4: standalone pull line, weighted like the big-invite line.
+   Full-width boxed callout (left-aligned, runs edge to edge of .wrap) so it reads
+   as a banner-like beat in the page rather than a small floating card. */
 .pull-line{
-  margin:24px auto; max-width:34ch; font-size:clamp(21px,2.4vw,28px);
+  margin:40px 0; max-width:none; text-align:left; font-size:clamp(21px,2.4vw,28px);
   border:1px solid var(--accent-line); background:var(--accent-soft);
-  padding:20px 28px;
+  padding:26px 32px;
 }
-@media (max-width:820px){ .pull-line{ max-width:none } }
 
 /* landing v4: footnote asterisk anchoring the AI-native stat to the footer citation */
 .fn-ref{ color:var(--accent); text-decoration:none; margin-left:1px }
