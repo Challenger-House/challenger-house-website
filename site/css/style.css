@@ -142,11 +142,14 @@ strong{ font-weight:600 }
   text-transform:uppercase;
 }
 .word-sub{
+  display:inline-block;
   margin-top:10px;
   font-size:10px;
   letter-spacing:.34em;
   text-transform:uppercase;
-  color:var(--ink-soft);
+  color:var(--paper);
+  background:var(--accent);
+  padding:6px 13px;
 }
 
 /* nav strip */
@@ -720,17 +723,17 @@ footer{ padding:80px 0 60px }
    (headline + copy). The svg is absolutely positioned so it takes its
    height from the text column rather than inflating the grid itself. */
 .hero-media{ grid-column:2; grid-row:1 / -1; align-self:center; min-width:0 }
-.hero-house{ position:relative; margin:0 auto; max-width:440px }
+.hero-house{ position:relative; margin:0 auto; max-width:280px }
 .hero-house img{ display:block; width:100%; height:auto }
 /* "Building the missing middle" caption laid over the empty floors of the house */
 .house-caption{
   position:absolute; left:0; right:0; top:53%; transform:translateY(-50%);
-  background:rgba(242,240,234,.85); box-shadow:0 0 0 1px var(--line-soft);
+  background:var(--accent);
   padding:16px 14px; text-align:center;
 }
 .house-caption span{
   font-family:var(--mono); font-size:clamp(15px,3.2vw,20px); font-weight:600;
-  letter-spacing:.1em; text-transform:uppercase; color:var(--ink); line-height:1.32; display:block;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--paper); line-height:1.32; display:block;
 }
 .hero-media .fig-cap{ position:absolute; top:100%; right:0; margin-top:10px }
 @media (max-width:1020px){
@@ -827,15 +830,16 @@ p.body, .body{ font-family:var(--sans); font-size:17px; line-height:1.72 }
 .hero-beats .beat-verb{ display:block; font-family:var(--head); font-size:23px; line-height:1.05; color:var(--ink) }
 .hero-beats .beat-time{ display:block; font-family:var(--mono); font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent-deep); margin-top:7px }
 @media (max-width:680px){
-  .hero-beats{ gap:12px 18px; margin:18px 0 16px }
-  .hero-beats .beat-verb{ font-size:18px }
+  /* the timeline is a feature on mobile, not a utility row: give it real
+     air above and below rather than squeezing for fold visibility (the
+     CTA needing a small scroll on mobile is fine) */
+  .hero-beats{ gap:14px 18px; margin:36px 0 32px }
+  .hero-beats .beat-verb{ font-size:20px }
   .hero-beats .beat-time{ font-size:11px; letter-spacing:.08em }
   .hero-beats .b1 .beat-bar{ width:22px }
   .hero-beats .b2 .beat-bar{ width:46px }
   .hero-beats .b3 .beat-bar{ width:78px }
-  /* tighten the CTA/signpost stack so the button clears the fold on a
-     real phone viewport, not just an idealised one */
-  .hero .btn-bar{ margin:12px 0 6px }
+  .hero .btn-bar{ margin:8px 0 6px }
   .hero .signpost{ margin-top:14px }
 }
 .sheet p, .door p, .foundation p, .face p, .offer p{ font-family:var(--sans); font-size:15px; line-height:1.7 }
@@ -1004,12 +1008,15 @@ h2, h3, summary, .sheet h3, .offer h3, .door h3, .face h3{ font-family:var(--hea
 .fn-ref{ color:var(--accent); text-decoration:none; margin-left:1px }
 .fn-ref:hover{ text-decoration:underline }
 
-/* landing v4: hero H1 is now a full question, not a short punchy statement — the
-   site's big display serif (Bodoni Moda, tuned for 3-5 word lines) reads too heavy
-   and too large at that length, so this headline gets its own, lighter treatment. */
+/* landing v4: hero H1 is now a full question, not a short punchy statement.
+   Bodoni Moda's display cut (used at the default large opsz on every other
+   page's h1, and on the logo) gets too heavy at sentence length, so this
+   headline uses the same typeface's "text" optical size instead of switching
+   families: same brand voice everywhere, tuned for reading, not shouting. */
 .hero-title{
-  font-family:var(--sans); font-weight:600; letter-spacing:0;
-  font-size:clamp(28px,3.4vw,42px); line-height:1.3;
+  font-family:var(--serif); font-weight:600; letter-spacing:0;
+  font-size:clamp(28px,3.4vw,42px); line-height:1.28;
+  font-optical-sizing:none; font-variation-settings:"opsz" 20;
 }
 
 /* architecture: sticky in-page index (the deep-tab menu) */
