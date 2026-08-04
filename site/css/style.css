@@ -713,7 +713,7 @@ footer{ padding:80px 0 60px }
 
 .hero{ padding:64px 0 80px }
 .hero-grid{
-  display:grid; grid-template-columns:minmax(380px, 5fr) 6fr;
+  display:grid; grid-template-columns:minmax(380px, 6fr) 6fr;
   grid-template-rows:auto auto;
   column-gap:64px; row-gap:28px; align-items:start;
 }
@@ -722,18 +722,18 @@ footer{ padding:80px 0 60px }
 /* Image spans both rows so it fills the full height of the hero content
    (headline + copy). The svg is absolutely positioned so it takes its
    height from the text column rather than inflating the grid itself. */
-.hero-media{ grid-column:2; grid-row:1 / -1; align-self:center; min-width:0 }
-.hero-house{ position:relative; margin:0 auto; max-width:280px }
+.hero-media{ grid-column:2; grid-row:1 / -1; align-self:start; min-width:0 }
+.hero-house{ position:relative; margin:0 auto; max-width:392px }
 .hero-house img{ display:block; width:100%; height:auto }
 /* "Building the missing middle" caption laid over the empty floors of the house */
 .house-caption{
   position:absolute; left:0; right:0; top:53%; transform:translateY(-50%);
-  background:var(--accent);
+  background:rgba(242,240,234,.62);
   padding:16px 14px; text-align:center;
 }
 .house-caption span{
   font-family:var(--mono); font-size:clamp(15px,3.2vw,20px); font-weight:600;
-  letter-spacing:.1em; text-transform:uppercase; color:var(--paper); line-height:1.32; display:block;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--accent-deep); line-height:1.32; display:block;
 }
 .hero-media .fig-cap{ position:absolute; top:100%; right:0; margin-top:10px }
 @media (max-width:1020px){
@@ -820,7 +820,7 @@ p.body, .body{ font-family:var(--sans); font-size:17px; line-height:1.72 }
 .hero .pain{ font-family:var(--sans); font-size:15.5px; line-height:1.68 }
 .hero .hero-offer{ font-family:var(--sans); font-size:16.5px; line-height:1.62; font-weight:600; color:var(--ink); max-width:56ch; margin:0 0 6px }
 /* hero timeline: three beats whose top marker widens with the time span (hour < day < quarter) */
-.hero-beats{ position:relative; display:flex; align-items:flex-start; flex-wrap:wrap; gap:16px 34px; margin:38px 0 30px; padding-top:3px }
+.hero-beats{ position:relative; display:flex; align-items:flex-start; flex-wrap:wrap; gap:16px 52px; margin:38px 0 30px; padding-top:3px }
 .hero-beats::before{ content:""; position:absolute; top:5px; left:1px; right:1px; height:1px; background:var(--line-mid); z-index:0 }
 .hero-beats .beat{ display:block; position:relative; z-index:1 }
 .hero-beats .beat-bar{ display:block; height:5px; border-radius:3px; background:var(--accent-deep); margin-bottom:13px }
