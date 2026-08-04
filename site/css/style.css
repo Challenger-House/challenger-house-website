@@ -728,12 +728,14 @@ footer{ padding:80px 0 60px }
 /* "Building the missing middle" caption laid over the empty floors of the house */
 .house-caption{
   position:absolute; left:0; right:0; top:53%; transform:translateY(-50%);
-  background:rgba(242,240,234,.62);
-  padding:16px 14px; text-align:center;
+  text-align:center;
 }
 .house-caption span{
   font-family:var(--mono); font-size:clamp(15px,3.2vw,20px); font-weight:600;
-  letter-spacing:.1em; text-transform:uppercase; color:var(--accent-deep); line-height:1.32; display:block;
+  letter-spacing:.1em; text-transform:uppercase; line-height:2.05;
+  color:var(--paper); background:var(--accent);
+  padding:4px 10px;
+  box-decoration-break:clone; -webkit-box-decoration-break:clone;
 }
 .hero-media .fig-cap{ position:absolute; top:100%; right:0; margin-top:10px }
 @media (max-width:1020px){
