@@ -8,18 +8,18 @@
    ============================================================ */
 
 :root{
-  --paper:        #F0ECE1;
-  --paper-2:      #EAE5D6;              /* alternate panels */
+  --paper:        #F2F0EA;
+  --paper-2:      #ECEAE1;              /* alternate panels */
   --ink:          #1C1A16;
-  --ink-soft:     #4C4840;              /* de-emphasised copy */
+  --ink-soft:     #5A5750;              /* de-emphasised copy */
   --line:         rgba(28,26,22,.6);    /* strong rules */
   --line-mid:     rgba(28,26,22,.28);
   --line-soft:    rgba(28,26,22,.14);
   --grid:         rgba(28,26,22,.025);
-  --accent:       #A05E1D;              /* burnt orange, drafted down for paper */
-  --accent-deep:  #7E4A15;              /* small text / links, contrast-safe */
-  --accent-soft:  rgba(160,94,29,.09);
-  --accent-line:  rgba(160,94,29,.45);
+  --accent:       #146B5C;              /* teal, live site accent */
+  --accent-deep:  #0F5B4E;              /* small text / links, contrast-safe */
+  --accent-soft:  rgba(20,107,92,.08);
+  --accent-line:  rgba(20,107,92,.42);
 
   --serif: "Bodoni Moda", "Didot", "Bodoni MT", Georgia, serif;
   --mono:  "IBM Plex Mono", "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
@@ -151,6 +151,7 @@ strong{ font-weight:600 }
   background:var(--accent);
   padding:6px 13px;
 }
+@media (min-width:821px){ .word-sub{ white-space:nowrap } }
 
 /* nav strip */
 .site-nav{
@@ -405,6 +406,7 @@ section.tight{ padding:44px 0 }
   background:var(--paper);
   padding:0;
   display:flex; flex-direction:column;
+  scroll-margin-top:90px;
 }
 .offer-head{
   display:flex; justify-content:space-between; align-items:center;
@@ -511,7 +513,7 @@ section.tight{ padding:44px 0 }
 
 .stamp{
   display:inline-block;
-  /* accent-deep, not accent: #A05E1D is 4.32:1 on paper and fails AA at this size */
+  /* accent-deep for max contrast on paper at this small size */
   border:2px solid var(--accent-deep);
   color:var(--accent-deep);
   font-size:12px; letter-spacing:.26em; text-transform:uppercase; font-weight:600;
@@ -714,14 +716,21 @@ footer{ padding:80px 0 60px }
 .hero{ padding:64px 0 80px }
 .hero-grid{
   display:grid; grid-template-columns:minmax(380px, 2fr) 1fr;
-  grid-template-rows:auto auto;
+  grid-template-rows:auto auto auto;
   column-gap:56px; row-gap:28px; align-items:start;
 }
-.hero-title{ grid-column:1; grid-row:1; margin:0 }
-.hero-copy{ grid-column:1; grid-row:2 }
-/* Image spans both rows so it fills the full height of the hero content
-   (headline + copy). The svg is absolutely positioned so it takes its
-   height from the text column rather than inflating the grid itself. */
+.hero-head{ grid-column:1; grid-row:1 }
+.hero-eyebrow{
+  display:block;
+  font-family:var(--mono); font-size:12.5px; letter-spacing:.16em;
+  text-transform:uppercase; font-weight:600; color:var(--accent-deep);
+  margin:0 0 14px;
+}
+.hero-copy-1{ grid-column:1; grid-row:2 }
+.hero-copy-2{ grid-column:1; grid-row:3 }
+/* Image spans all three text rows so it fills the full height of the hero
+   content (headline + both paragraphs). The svg is absolutely positioned so
+   it takes its height from the text column rather than inflating the grid. */
 .hero-media{ grid-column:2; grid-row:1 / -1; align-self:start; min-width:0 }
 .hero-house{ position:relative; margin:0 auto; max-width:392px }
 .hero-house img{ display:block; width:100%; height:auto }
@@ -744,9 +753,10 @@ footer{ padding:80px 0 60px }
 .hero-media .fig-cap{ position:absolute; top:100%; right:0; margin-top:10px }
 @media (max-width:1020px){
   .hero-grid{ grid-template-columns:1fr; grid-template-rows:none; row-gap:0 }
-  .hero-title, .hero-copy, .hero-media{ grid-column:auto; grid-row:auto }
-  .hero-title{ margin:0 0 28px }
+  .hero-head, .hero-copy-1, .hero-copy-2, .hero-media{ grid-column:auto; grid-row:auto }
+  .hero-head{ margin:0 0 28px }
   .hero-copy{ margin-bottom:0 }
+  .hero-copy br.lg-break{ display:none }
   /* index hero only: tighten the gap below the signpost cue so it sits
      closer to the testimonial it points at */
   .hero:not(.has-ghost){ padding-bottom:32px }
@@ -824,7 +834,8 @@ footer{ padding:80px 0 60px }
 p.lead, .hero .sub{ font-family:var(--sans); font-size:18px; line-height:1.7; font-weight:400 }
 p.body, .body{ font-family:var(--sans); font-size:17px; line-height:1.72 }
 .hero .pain{ font-family:var(--sans); font-size:15.5px; line-height:1.68 }
-.hero .hero-offer{ font-family:var(--sans); font-size:16.5px; line-height:1.62; font-weight:600; color:var(--ink); max-width:56ch; margin:0 0 6px }
+.hero .hero-offer{ font-family:var(--sans); font-size:16.5px; line-height:1.62; font-weight:600; color:var(--ink); max-width:74ch; margin:0 0 6px }
+.hero-copy br.lg-break{ display:inline }
 /* hero timeline: three beats whose top marker widens with the time span (hour < day < quarter) */
 .hero-beats{ position:relative; display:flex; align-items:flex-start; flex-wrap:wrap; gap:16px 52px; margin:38px 0 50px; padding-top:3px }
 .hero-beats::before{ content:""; position:absolute; top:5px; left:1px; right:1px; height:1px; background:var(--line-mid); z-index:0 }
@@ -943,9 +954,10 @@ h2, h3, summary, .sheet h3, .offer h3, .door h3, .face h3{ font-family:var(--hea
 
 /* landing hero on mobile: headline, then copy + CTA, then the artwork last */
 @media (max-width:1020px){
-  .hero-title{ order:0 }
-  .hero-copy{ order:1 }
+  .hero-head{ order:0 }
+  .hero-copy-1{ order:1 }
   .hero-media{ order:2; margin-top:24px }
+  .hero-copy-2{ order:3; margin-top:24px }
 }
 
 /* hero call-to-action pair (landing) */
@@ -986,6 +998,7 @@ h2, h3, summary, .sheet h3, .offer h3, .door h3, .face h3{ font-family:var(--hea
 /* footer: company legal on the right on desktop, stacked on mobile */
 .foot-legal-col{ text-align:right; align-self:end }
 .foot-legal-col .foot-legal{ margin-top:0 }
+.foot-legal-col .foot-legal + .foot-legal{ margin-top:14px }
 @media (max-width:820px){ .foot-legal-col{ text-align:left; margin-top:20px } }
 /* handwritten accent (building sub-labels, casual annotations) */
 .hand{ font-family:"Caveat", cursive }
@@ -1021,7 +1034,7 @@ h2, h3, summary, .sheet h3, .offer h3, .door h3, .face h3{ font-family:var(--hea
    families: same brand voice everywhere, tuned for reading, not shouting. */
 .hero-title{
   font-family:var(--serif); font-weight:600; letter-spacing:0;
-  font-size:clamp(28px,3.4vw,42px); line-height:1.28;
+  font-size:clamp(28px,3.4vw,42px); line-height:1.28; margin:0;
   font-optical-sizing:none; font-variation-settings:"opsz" 20;
 }
 

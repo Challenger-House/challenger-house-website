@@ -7,3 +7,9 @@ https://www.challenger-house.com/*  https://www.challenger.house/:splat   301!
 # Old Sprint URLs -> The Build
 /sprint      /build.html   301
 /sprint.html /build.html   301
+
+# Page renames
+/experience       /one-day   301!
+/experience.html  /one-day   301!
+/builders         /team      301!
+/builders.html    /team      301!
