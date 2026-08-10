@@ -61,7 +61,7 @@
     var result = document.getElementById(prefix + '-result');
 
     function headcount() {
-      var raw = 100 * Math.pow(500, (+pos.value) / 1000); // 100 .. 50,000
+      var raw = 100 * Math.pow(1000, (+pos.value) / 1000); // 100 .. 100,000
       return roundHeadcount(raw);
     }
     function calc() {

@@ -104,21 +104,21 @@
       <article class="gap-item">
         <div class="gap-no">01</div>
         <div>
-          <h3>Never written down.</h3>
+          <h3>Tacit knowledge.</h3>
           <p>How decisions really get made. How handovers really work. Where judgment really sits. The tacit knowledge of your best people, in their heads and in the hand-offs between them. None of it is encoded, so AI cannot touch it, and every licence you bought is reading the org chart instead.</p>
         </div>
       </article>
       <article class="gap-item">
         <div class="gap-no">02</div>
         <div>
-          <h3>Unwritten for good reasons.</h3>
+          <h3>Organisational shadow.</h3>
           <p>Nobody skipped the writing by accident. This is the organisational shadow: the people and the politics. Ambiguity protects options, positions and peace. That is why this is leadership work with your team in the room, not a documentation project you can delegate.</p>
         </div>
       </article>
       <article class="gap-item">
         <div class="gap-no">03</div>
         <div>
-          <h3>Never remembered.</h3>
+          <h3>Learning loop.</h3>
           <p>Every AI pilot reveals something true about how your company actually works. Without a learning loop, none of it is captured, every pilot starts from zero, and nothing compounds.</p>
         </div>
       </article>
@@ -175,15 +175,14 @@
 <section>
   <div class="wrap">
     <p class="zone"><span class="ztext">Zone 04 / Who we work with</span></p>
-    <h2 class="mb-3">Our clients are challengers.</h2>
+    <h2 class="mb-2">Our clients are challengers.</h2>
+    <p class="lead mb-2">They&rsquo;d rather shape what&rsquo;s coming than have it happen to them.</p>
     <ul class="tribe-list">
-      <li><span>They&rsquo;d rather shape what&rsquo;s coming than have it happen to them.</span></li>
       <li><span><strong>They know the next challenger in their market will be AI-native: leaner, flatter, faster.</strong> The race that matters runs between incumbents: who closes the gap first.</span></li>
       <li><span><strong>They know Copilot is where the race starts, not where it is won.</strong> They are done talking about frontier AI and want their hands on it.</span></li>
       <li><span><strong>They treat this as a complex change process: 80% people, 20% tools.</strong> And they lead it themselves, with or without AI in their title.</span></li>
     </ul>
     <p class="big-invite mt-3">See your leadership team in that? <a class="think-link invite-link" href="one-day.html">The 1-Day is the front door. &rarr;</a></p>
-    <p class="body soft mt-2">You&rsquo;re the one carrying AI in this organisation. Bring us the problem, and we&rsquo;ll help you make the case, so you stop arguing on your own.</p>
   </div>
 </section>
 
@@ -192,16 +191,24 @@
   <div class="wrap">
     <p class="zone"><span class="ztext">Zone 05 / The elephant</span></p>
     <h2 class="mb-2">AI is coming for the management function.</h2>
-    <p class="body soft mt-1">Every market leader in history rationalised waiting, and every one was being sensible, right up until it was too late. This time the dilemma is not aimed at your product or your factory. It is aimed at how you manage.</p>
-    <p class="body soft mt-1">The work below you keeps accelerating. The management system does not. It still runs on the Monday jour fixe, the hundred-slide deck, the meeting about the meeting.</p>
-    <p class="body soft mt-1">That system was built for a different era, when talking was how knowledge moved through an organisation. AI moves it now. The talking is in the way, and it has a price.</p>
+    <div class="sheet-grid c3 mt-2">
+      <div class="sheet panel" style="padding:24px 26px">
+        <p style="font-size:15px;color:var(--ink)">Every market leader in history rationalised waiting, and every one was being sensible, right up until it was too late. This time the dilemma is not aimed at your product or your factory. It is aimed at how you manage.</p>
+      </div>
+      <div class="sheet panel" style="padding:24px 26px">
+        <p style="font-size:15px;color:var(--ink)">The work below you keeps accelerating. The management system does not. It still runs on the Monday jour fixe, the hundred-slide deck, the meeting about the meeting.</p>
+      </div>
+      <div class="sheet panel" style="padding:24px 26px">
+        <p style="font-size:15px;color:var(--ink)">That system was built for a different era, when talking was how knowledge moved through an organisation. AI moves it now. The talking is in the way, and it has a price.</p>
+      </div>
+    </div>
 
-    <div class="calc mt-3">
+    <div class="calc mt-4">
       <div class="calc-head"><span>The Talking Tax</span><span class="live">LIVE INSTRUMENT</span></div>
       <div class="calc-body">
         <h3>Run both numbers.</h3>
 
-        <p class="label soft mb-1">Your team</p>
+        <p class="calc-subhead">Your team</p>
         <div class="calc-row">
           <label for="tt-a-people">People involved in the work <output id="tt-a-people-v" for="tt-a-people">8</output></label>
           <input type="range" id="tt-a-people" min="2" max="50" step="1" value="8">
@@ -212,7 +219,7 @@
         </div>
         <div class="calc-row">
           <label for="tt-a-cost">All-in cost per person, per year <output id="tt-a-cost-v" for="tt-a-cost">€120,000</output></label>
-          <input type="range" id="tt-a-cost" min="60000" max="250000" step="5000" value="120000">
+          <input type="range" id="tt-a-cost" min="60000" max="1000000" step="10000" value="120000">
         </div>
         <div class="calc-result" aria-live="polite">
           <div class="big" id="tt-a-result">€384,000</div>
@@ -221,18 +228,18 @@
 
         <hr class="hr" style="margin:34px 0">
 
-        <p class="label soft mb-1">The shadow</p>
+        <p class="calc-subhead">The shadow</p>
         <div class="calc-row">
           <label for="tt-b-people">People in your organisation <output id="tt-b-people-v" for="tt-b-people">3,000</output></label>
-          <input type="range" id="tt-b-people" min="0" max="1000" step="1" value="547">
+          <input type="range" id="tt-b-people" min="0" max="1000" step="1" value="492">
         </div>
         <div class="calc-row">
           <label for="tt-b-drag">How much your management system slows them down: waiting on decisions, preparing updates, re-explaining what was never written down <output id="tt-b-drag-v" for="tt-b-drag">2%</output></label>
-          <input type="range" id="tt-b-drag" min="0.5" max="10" step="0.1" value="2">
+          <input type="range" id="tt-b-drag" min="0.5" max="30" step="0.5" value="2">
         </div>
         <div class="calc-row">
           <label for="tt-b-cost">Average all-in cost per person, per year <output id="tt-b-cost-v" for="tt-b-cost">€90,000</output></label>
-          <input type="range" id="tt-b-cost" min="40000" max="150000" step="5000" value="90000">
+          <input type="range" id="tt-b-cost" min="40000" max="1000000" step="10000" value="90000">
         </div>
         <div class="calc-result" aria-live="polite">
           <div class="big" id="tt-b-result">€5,400,000</div>
@@ -246,8 +253,10 @@
       </div>
     </div>
 
-    <p class="body soft mt-3">The direction of travel is published. AI-native firms run 25% smaller, with 15% fewer managers, at comparable valuations.<a href="#fn-hbs" id="fnref-hbs" class="fn-ref">*</a> And it is no longer just researchers saying it: COOs now say in public that the leadership team, not the technology, is the primary constraint on the transformation it claims to lead.<a href="#fn-fortune" id="fnref-fortune" class="fn-ref">**</a></p>
-    <p class="compound center mt-4">You cannot slide-deck your way out of this one. <em>You have to rebuild the work.</em></p>
+    <p class="body soft mt-4" style="max-width:74ch;margin-inline:auto">The direction of travel is published. AI-native firms run 25% smaller, with 15% fewer managers, at comparable valuations.<a href="#fn-hbs" id="fnref-hbs" class="fn-ref">*</a> And it is no longer just researchers saying it: COOs now say in public that the leadership team, not the technology, is the primary constraint on the transformation it claims to lead.<a href="#fn-fortune" id="fnref-fortune" class="fn-ref">**</a></p>
+    <div class="panel panel-accent mt-3" style="padding:26px 30px">
+      <p class="compound center" style="max-width:none">You cannot slide-deck your way out of this one. <em>You have to rebuild the work.</em></p>
+    </div>
   </div>
 </section>
 
@@ -257,7 +266,7 @@
     <p class="zone"><span class="ztext">Zone 06 / Who we are</span></p>
     <h2 class="mb-2">Builders, not consultants.</h2>
     <p class="body soft" style="max-width:none;text-wrap:pretty">Organisations will look fundamentally different within five to ten years: flatter, faster, part human, part agentic, with judgment where the hierarchy used to be. We build for that future with our clients, rather than watch it arrive.</p>
-    <p class="body soft mt-1" style="max-width:none;text-wrap:pretty">Designing for it is CEO work: load-bearing structure, culture and people in one discipline. It cannot be delegated two levels down to a box in HR.</p>
+    <p class="house-line mt-2" style="max-width:none">Designing for it is CEO work: load-bearing structure, culture and people in one discipline. It cannot be delegated two levels down to a box in HR.</p>
     <p class="body soft mt-1" style="max-width:none;text-wrap:pretty">We come from twenty-five years of systemic organisational development inside Europe&rsquo;s largest corporations. And we never hand over a drawing and leave: we stay and build it with you, in the room, on your real work, until your team can build without us.</p>
     <div class="team-row mt-3">
       <figure class="team-face"><img src="assets/images/marcus-druen.jpg" alt="Marcus Druen"><figcaption>Marcus Druen</figcaption></figure>
