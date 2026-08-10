@@ -7,44 +7,80 @@
   }, { passive: true });
 })();
 
-// Talking Tax calculator. The maths must survive unchanged — see
-// components/talking-tax-calculator.md. Regression: defaults give
-// €480,000 / 4.8; people 50, share 60, cost 120 give €3,600,000 / 30.0.
+// Talking Tax widget. Two independent dial sets: "tt-a" (your team) runs
+// on the landing page and the 1-Day page; "tt-b" (the shadow) runs on the
+// landing page only. In-memory state only, no storage.
 (function () {
-  var people = document.getElementById('s-people');
-  if (!people) return;
-  var share = document.getElementById('s-share');
-  var cost = document.getElementById('s-cost');
-  var vPeople = document.getElementById('v-people');
-  var vShare = document.getElementById('v-share');
-  var vCost = document.getElementById('v-cost');
-  var rTotal = document.getElementById('r-total');
-  var rFte = document.getElementById('r-fte');
-
-  function fmt(n) { return '€' + Math.round(n).toLocaleString('en-GB'); }
-
-  function calc() {
-    var p = +people.value;
-    var s = +share.value;
-    var costPerPerson = +cost.value * 1000;
-    var total = p * costPerPerson * (s / 100);
-    var fte = (total / costPerPerson).toFixed(1);
-
-    vPeople.textContent = p;
-    vShare.textContent = s + '%';
-    vCost.textContent = fmt(costPerPerson);
-    rTotal.textContent = fmt(total);
-    rFte.textContent = fte + ' full-time salaries';
-
-    people.setAttribute('aria-valuetext', p + ' people');
-    share.setAttribute('aria-valuetext', s + ' percent');
-    cost.setAttribute('aria-valuetext', fmt(costPerPerson) + ' per person per year');
+  function fmtEuro(n) {
+    return '€' + (Math.round(n / 1000) * 1000).toLocaleString('en-GB');
+  }
+  function fmtPct(n) {
+    return (Math.round(n * 10) / 10) + '%';
+  }
+  // dial set two's headcount slider runs on a logarithmic feel; round the
+  // displayed figure to something readable at its own scale.
+  function roundHeadcount(n) {
+    if (n < 1000) return Math.round(n / 50) * 50;
+    if (n < 10000) return Math.round(n / 100) * 100;
+    return Math.round(n / 500) * 500;
   }
 
-  [people, share, cost].forEach(function (el) {
-    el.addEventListener('input', calc);
-  });
-  calc();
+  function wireSetOne(prefix) {
+    var people = document.getElementById(prefix + '-people');
+    if (!people) return;
+    var share = document.getElementById(prefix + '-share');
+    var cost = document.getElementById(prefix + '-cost');
+    var vPeople = document.getElementById(prefix + '-people-v');
+    var vShare = document.getElementById(prefix + '-share-v');
+    var vCost = document.getElementById(prefix + '-cost-v');
+    var result = document.getElementById(prefix + '-result');
+
+    function calc() {
+      var p = +people.value, s = +share.value, c = +cost.value;
+      var total = p * c * (s / 100);
+      vPeople.textContent = p;
+      vShare.textContent = s + '%';
+      vCost.textContent = fmtEuro(c);
+      result.textContent = fmtEuro(total);
+      people.setAttribute('aria-valuetext', p + ' people');
+      share.setAttribute('aria-valuetext', s + ' percent');
+      cost.setAttribute('aria-valuetext', fmtEuro(c) + ' per person per year');
+    }
+    [people, share, cost].forEach(function (el) { el.addEventListener('input', calc); });
+    calc();
+  }
+
+  function wireSetTwo(prefix) {
+    var pos = document.getElementById(prefix + '-people');
+    if (!pos) return;
+    var drag = document.getElementById(prefix + '-drag');
+    var cost = document.getElementById(prefix + '-cost');
+    var vPeople = document.getElementById(prefix + '-people-v');
+    var vDrag = document.getElementById(prefix + '-drag-v');
+    var vCost = document.getElementById(prefix + '-cost-v');
+    var result = document.getElementById(prefix + '-result');
+
+    function headcount() {
+      var raw = 100 * Math.pow(500, (+pos.value) / 1000); // 100 .. 50,000
+      return roundHeadcount(raw);
+    }
+    function calc() {
+      var p = headcount(), d = +drag.value, c = +cost.value;
+      var total = p * c * (d / 100);
+      vPeople.textContent = p.toLocaleString('en-GB');
+      vDrag.textContent = fmtPct(d);
+      vCost.textContent = fmtEuro(c);
+      result.textContent = fmtEuro(total);
+      pos.setAttribute('aria-valuetext', p.toLocaleString('en-GB') + ' people');
+      drag.setAttribute('aria-valuetext', fmtPct(d));
+      cost.setAttribute('aria-valuetext', fmtEuro(c) + ' per person per year');
+    }
+    [pos, drag, cost].forEach(function (el) { el.addEventListener('input', calc); });
+    calc();
+  }
+
+  wireSetOne('tt-a');
+  wireSetTwo('tt-b');
 })();
 
 // Cookie / consent banner (GDPR + UK GDPR). The site sets no non-essential
