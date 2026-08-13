@@ -1042,7 +1042,7 @@ h2, h3, summary, .sheet h3, .offer h3, .door h3, .face h3{ font-family:var(--hea
   .hero.has-ghost .wrap > *, .hero.has-ghost .wrap-narrow > *{ grid-column:2; min-width:0 }
   .hero.has-ghost .wrap > .page-ghost, .hero.has-ghost .wrap-narrow > .page-ghost{ grid-column:1; grid-row:1 / span 50; align-self:start; margin:0 }
   .hero.has-ghost.has-thumb .wrap{ grid-template-columns:auto 1fr auto }
-  .hero.has-thumb .wrap > .hero-thumb{ grid-column:3; grid-row:1 / span 50; align-self:start; margin:0; width:220px }
+  .hero.has-thumb .wrap > .hero-thumb{ grid-column:3; grid-row:1 / span 50; align-self:start; margin:0; width:340px }
 }
 .hero-thumb{ margin:0 }
 .hero-thumb img{ display:block; width:100%; height:auto; border:1px solid var(--line) }
