@@ -312,6 +312,38 @@ section.tight{ padding:44px 0 }
 
 /* ---------- column grids with ruled tops ---------- */
 
+/* Zone 05 (the elephant) intro triptych, third box calls out down to the Talking Tax widget */
+.elephant-intro{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:16px;
+  margin:28px 0 0;
+}
+.elephant-intro .box{
+  border:1px solid var(--line-mid);
+  background:var(--paper);
+  padding:24px 26px;
+  position:relative;
+  border-radius:0;
+}
+.elephant-intro .box p{ font-size:15px; color:var(--ink) }
+.elephant-intro .box.callout{ font-weight:600 }
+.elephant-intro .box.callout::after{
+  content:"";
+  position:absolute;
+  bottom:-13px;
+  left:66%;
+  transform:translateX(-50%) rotate(45deg);
+  width:22px; height:22px;
+  background:var(--paper-2);
+  border-right:1px solid var(--line-mid);
+  border-bottom:1px solid var(--line-mid);
+}
+@media (max-width:1020px){
+  .elephant-intro{ grid-template-columns:1fr }
+  .elephant-intro .box.callout::after{ left:50% }
+}
+
 .sheet-grid{ display:grid; gap:40px }
 .sheet-grid.c2{ grid-template-columns:repeat(2, 1fr) }
 .sheet-grid.c3{ grid-template-columns:repeat(3, 1fr) }
