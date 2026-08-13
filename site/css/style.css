@@ -715,6 +715,9 @@ input[type="range"]::-moz-range-thumb{
 .hardlines{ margin-top:22px; display:grid; gap:14px }
 .hardlines p{ font-size:13px; color:var(--ink-soft); border-top:1px solid var(--line-soft); padding-top:14px }
 .hardlines p b, .hardlines p .acc{ color:var(--accent-deep) }
+.hardlines p.hardlines-lead{ font-size:15px; font-weight:700; color:var(--ink) }
+
+.calc-tagline{ font-family:var(--sans); font-style:italic; font-size:13px; color:var(--ink-soft); margin-top:6px }
 
 /* ---------- faces / builders ---------- */
 
