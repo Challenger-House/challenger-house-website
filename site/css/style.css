@@ -312,31 +312,6 @@ section.tight{ padding:44px 0 }
 
 /* ---------- column grids with ruled tops ---------- */
 
-/* Confirmed "B4" texture treatment (Löschpapier): coarse-grain fibre texture at
-   low opacity with a terracotta hairline border. Applied to punchline/callout
-   boxes site-wide (landing, 1-Day, Build, Architecture), not just one box. */
-.texture-panel{
-  position:relative;
-  background:#EAF0EC;
-  border:1px solid #C96F4A;
-  padding:26px 28px;
-}
-.texture-panel::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.35' numOctaves='3' seed='11'/><feColorMatrix type='matrix' values='0 0 0 0 0.42 0 0 0 0 0.36 0 0 0 0 0.28 0 0 0 0.16 0'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>");
-}
-.texture-panel > *{ position:relative }
-
-/* Talking Tax: the shadow column reads in the terracotta/orange from the same
-   texture treatment, distinguishing it from the team column's green */
-.calc-scoreboard .calc-result:last-child .big{ color:#C96F4A }
-.calc-controls .calc-col:last-child .calc-row output{ color:#C96F4A }
-.calc-controls .calc-col:last-child input[type="range"]::-webkit-slider-thumb{ border-color:#C96F4A }
-.calc-controls .calc-col:last-child input[type="range"]::-moz-range-thumb{ border-color:#C96F4A }
-
 /* two-column reading inside a texture panel, same box width, easier to scan
    than long line breaks; stacks to one column on mobile */
 .two-col-text{ display:grid; grid-template-columns:1fr 1fr; gap:4px 28px }
@@ -346,7 +321,7 @@ section.tight{ padding:44px 0 }
 .day-arc{ display:grid; grid-template-columns:repeat(3, 1fr); gap:16px }
 .day-arc .box{ border:1px solid var(--line-mid); background:var(--paper); padding:24px 26px; border-radius:0 }
 .day-arc .box .calc-subhead{ margin-bottom:12px }
-.day-arc .box p:not(.calc-subhead){ font-size:15px; color:var(--ink) }
+.day-arc .box p:not(.calc-subhead){ font-family:var(--sans); font-size:15px; line-height:1.6; color:var(--ink) }
 @media (max-width:1020px){ .day-arc{ grid-template-columns:1fr } }
 
 .sheet-grid{ display:grid; gap:40px }
@@ -1443,3 +1418,30 @@ main [id^="arch-"]{ scroll-margin-top:24px }
 .five-one{ border-left:3px solid var(--accent); padding:2px 0 2px 22px; margin:30px 0; max-width:76ch }
 .five-one .fh{ font-family:var(--head); font-weight:600; font-size:clamp(19px,2.2vw,24px); line-height:1.1; margin-bottom:9px; color:var(--ink) }
 .five-one p{ font-family:var(--sans); font-size:16px; line-height:1.6; color:var(--ink-soft); margin:0 }
+
+/* Confirmed "B4" texture treatment (Löschpapier): coarse-grain fibre texture at
+   low opacity with a terracotta hairline border. Reserved for client quotes
+   only (testimonials with a real attribution), site-wide. Declared last in the
+   cascade on purpose so it wins over earlier single-class rules like
+   .smallquote{background:var(--cool)} when both classes are combined. */
+.texture-panel{
+  position:relative;
+  background:#EAF0EC;
+  border:1px solid #C96F4A;
+  padding:26px 28px;
+}
+.texture-panel::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.35' numOctaves='3' seed='11'/><feColorMatrix type='matrix' values='0 0 0 0 0.42 0 0 0 0 0.36 0 0 0 0 0.28 0 0 0 0.16 0'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>");
+}
+.texture-panel > *{ position:relative }
+
+/* Talking Tax: the shadow column reads in the terracotta/orange from the same
+   texture treatment, distinguishing it from the team column's green */
+.calc-scoreboard .calc-result:last-child .big{ color:#C96F4A }
+.calc-controls .calc-col:last-child .calc-row output{ color:#C96F4A }
+.calc-controls .calc-col:last-child input[type="range"]::-webkit-slider-thumb{ border-color:#C96F4A }
+.calc-controls .calc-col:last-child input[type="range"]::-moz-range-thumb{ border-color:#C96F4A }
