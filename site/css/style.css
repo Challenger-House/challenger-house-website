@@ -490,14 +490,6 @@ section.tight{ padding:44px 0 }
 
 /* ---------- the suite: house / floors / doors ---------- */
 
-.doctrine{
-  font-family:var(--serif); font-style:italic; font-weight:500;
-  font-size:clamp(19px,2.2vw,26px);
-  border-left:2px solid var(--accent);
-  padding:4px 0 4px 22px;
-  margin-bottom:40px;
-}
-
 .house{ border-top:1px solid var(--line) }
 
 .floor{ border-bottom:1px solid var(--line-soft); padding:26px 0 34px }
@@ -859,7 +851,7 @@ footer{ padding:80px 0 60px }
 
 .center{ text-align:center }
 .compound{
-  font-family:var(--serif); font-size:clamp(22px,3vw,32px); font-weight:600; line-height:1.35;
+  font-family:var(--serif); font-size:clamp(24px,3.4vw,38px); font-weight:600; line-height:1.3;
 }
 .compound em{ color:var(--accent); font-weight:500 }
 
@@ -984,13 +976,6 @@ h2, h3, summary, .sheet h3, .offer h3, .door h3, .face h3{ font-family:var(--hea
 /* cool inset boxes: the "blueprint" tint against the warm page */
 .smallquote{ background:var(--cool) }
 
-/* enlarged dominating statement (Bodoni display) */
-.statement{
-  font-family:var(--serif); font-weight:600;
-  font-size:clamp(28px, 4.4vw, 52px); line-height:1.07; letter-spacing:.003em;
-  max-width:20ch; color:var(--ink);
-}
-.statement em{ font-style:italic; color:var(--accent) }
 
 /* UK company details in footer */
 .foot-legal{ font-family:var(--sans); font-size:11.5px; line-height:1.6; color:var(--ink-soft); margin-top:16px; max-width:52ch }
@@ -1064,14 +1049,11 @@ h2, h3, summary, .sheet h3, .offer h3, .door h3, .face h3{ font-family:var(--hea
 
 /* ---- v2.4: review changes (2026-07-23) ---- */
 /* mid-page statement/callout lines move to Fraunces; Bodoni stays on logo + hero H1 */
-.compound, .doctrine, .statement, .house-line{ font-family:var(--head) }
-.compound em, .doctrine em, .statement em, .house-line em{ font-style:italic; color:var(--accent) }
+.compound, .house-line{ font-family:var(--head) }
+.compound em, .house-line em{ font-style:italic; color:var(--accent) }
 /* big Fraunces "recognise yourself" invite line */
 .big-invite{ font-family:var(--head); font-weight:600; font-size:clamp(26px,3.6vw,42px); line-height:1.18; max-width:22ch; margin:14px 0 6px }
 .big-invite a{ color:var(--accent-deep); border-bottom:1px solid var(--accent-line) }
-/* the experience "bottom row" statement spreads wide across the page */
-.statement{ max-width:26ch }
-.statement.wide{ max-width:none; font-size:clamp(30px,5vw,60px) }
 /* footer: company legal on the right on desktop, stacked on mobile */
 .foot-legal-col{ text-align:right; align-self:end }
 .foot-legal-col .foot-legal{ margin-top:0 }
