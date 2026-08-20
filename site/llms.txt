@@ -1,48 +1,62 @@
 # Challenger House
 
-> Organisational Architecture for the AI transition. Nobody wrote down how you actually lead. Every function in your company is being redesigned for AI, except the one that runs them all: management. That gap is the missing middle, and Challenger House builds it with your leadership team, with frontier AI, on real work.
+> Organisational Architecture for the AI transition. Nobody wrote down how you lead. Every function in your company is being redesigned for AI, except the one that runs them all: management. That gap is the missing middle, and Challenger House builds it with your leadership team, on real work, live.
 
-Every function in your company is being redesigned for AI. Except the one that runs them all: management. That is the missing middle. Challenger House builds it with you, by writing down how you actually work: your leadership team, frontier AI, one real piece of management work, live, in a day. Once it is written down, AI can finally work on it, and so can you.
+The site has three pages beyond this landing summary. The landing page says why. What we do says what. How we think is the full reference, in seven parts, for anyone who wants to chew.
 
-We are three operators (Marcus Druen, André Cramer, Brittney Bean) with three decades of organisational development, facilitation and venture building, now turned on the AI transition. We spark courage to act now.
+We are three builders (Marcus Druen, André Cramer, Brittney Bean) with three decades of organisational development, facilitation and venture building, now turned on the AI transition. Builders, not consultants. We spark courage to act now.
 
-## The missing middle
+## Why: the missing middle
 
-You run two organisations: the formal one you wrote down, and the informal one that actually gets the work done. AI only knows the first. Between them sits everything your company runs on but never built. Three floors, all empty:
+You run two organisations: the formal one you wrote down, and the informal one that gets the work done. AI only knows the first. Everything in between is the missing middle, and it has three parts:
 
-- Never written down: how decisions really get made, how handovers really work, where judgment really sits. None of it is encoded, so AI cannot touch it, and every licence you bought is reading the org chart instead.
-- Unwritten for good reasons: this is the organisational shadow, the people and the politics. Ambiguity protects options, positions and peace, which is why this is leadership work with the team in the room, not a documentation project to delegate.
-- Never remembered: every AI pilot reveals something true about how the company actually works, but without a learning loop none of it is captured, every pilot starts from zero, and nothing compounds.
+- Tacit knowledge: how decisions really get made and where judgment sits. It lives in your best people's heads, and your AI reads the org chart instead.
+- Organisational shadow: nobody skipped the writing by accident. Ambiguity protects options, positions and peace. That makes this leadership work, with the team present.
+- Learning loop: every pilot reveals something true about how you work. Without a loop, every pilot starts from zero.
 
-Challenger House builds the missing middle: the organisation written down, honestly enough for people to recognise it, precisely enough for AI to run on it, and with the learning loop that keeps it alive.
+AI is coming for the management function. The work below leadership accelerates while the management system still runs on the Monday jour fixe, the hundred-slide deck, the meeting about the meeting. That system was built for an era when talking was how knowledge moved through an organisation. Now knowledge moves through AI, and the talking has a price: the Talking Tax, a live instrument on the landing page.
 
-## The offer (one hour, one day, one quarter)
+## What we do (one hour, one day, one quarter)
 
-- One hour, free, 1:1 remote: bring the problem that keeps coming back. We work it live, with AI as your sparring partner. You leave seeing your missing middle for the first time.
-- [The 1-Day Experience](https://www.challenger.house/one-day.html): four figures, your leadership team, one value stream. Your team takes one real piece of management work, the board paper, the investment decision, the steering meeting, and rebuilds it with frontier AI, live in the room. You leave with working artefacts (workflows redesigned, first MVPs, a backlog of use cases, the start of a business case) and something no licence can buy: your team has felt what AI does to its own thinking and judgment.
-- [The Build](https://www.challenger.house/build.html): five figures, three months, your team. Three months wrapped around a three-day Residency, so the backlog gets built, the unwritten gets written, and the learning loop closes: what every week reveals is captured, so capability compounds until the new way of working survives Monday. A living Org Mirror comes with it.
+Full page: https://www.challenger.house/what-we-do
 
-## The three gaps we close
-
-- The imagination gap: leaders cannot act on capabilities they have never experienced, and for most leadership teams generative AI means Copilot, so the ambition starts too low. If the top does not use it, the top cannot judge it.
-- The decision gap: the work below leadership keeps accelerating while the management system does not. Decisions still travel through the Monday jour fixe, the hundred-slide deck, the meeting about the meeting. Management has been digitised, not yet redesigned for AI.
-- The operating gap: every company runs two organisations, formal and informal, and they drift further apart with every pilot. What each pilot reveals is never captured, so nothing compounds, licences sit idle, and pilots die in meetings.
+- The hour, free, two visits: 45 minutes with Marcus on the problem that keeps coming back, then an hour one to one with the leader, then an hour inside one of the team's regular meetings with frontier AI on work that looks like theirs.
+- [The 1-Day Experience](https://www.challenger.house/what-we-do#one-day): four figures. The leadership team takes one real piece of management work, the board paper, the investment decision, the steering meeting, and rebuilds it with frontier AI, live, in a day. You leave with workflows redesigned, first MVPs, a backlog of use cases, the start of a business case to go beyond Copilot, and a team that has felt what AI does to its own judgment. The most senior accountable leader is in the room.
+- [The Build](https://www.challenger.house/what-we-do#build): five figures, one quarter. Three months wrapped around a three-day Residency, on the workflows you actually run: Define (weeks 1 to 4), the Residency (three days), Embed (weeks 5 to 12). You leave with your missing middle built and running, three priority workflows rebuilt with AI inside them, a living Org Mirror, the Writing-Down Protocol, instruments built for your meetings, and board-ready evidence. Zero slide decks.
+- [What we are building](https://www.challenger.house/what-we-do#what-we-are-building): the Org Mirror and the AI Constitution, built with pioneering clients.
 
 ## Who we work with
 
-Our clients are challengers. They'd rather shape what's coming than have it happen to them. They know the next challenger in their market will be AI-native: leaner, flatter, faster, and the race that matters runs between incumbents, who closes the gap first. They know Copilot is where the race starts, not where it is won. They treat this as a complex change process, 80% people and 20% tools, and lead it themselves, with or without AI in their title.
+Leadership teams who can act on their own authority: a business unit inside a corporation, a standalone subsidiary, a founder-led scale-up. They know the next challenger in their market will be AI-native. They know Copilot is where the race starts. They treat this as a complex change process, 80% people and 20% tools, and lead it themselves.
 
-## Thinking and people
+## Who we are
 
-- [Architecture, our full point of view](https://www.challenger.house/architecture.html): Why AI demands new organisational architecture. The house (attic = tacit knowledge, missing middle = the layer never built, basement = the organisational shadow), the three things that change at once, AI sovereignty and the five cognitive effects (the Plausibility Illusion), and the AI Constitution.
-- [The Team](https://www.challenger.house/team.html): The people behind Challenger House.
-- [The Brief (PDF)](https://www.challenger.house/assets/the-brief.pdf): The full argument in one document to read or forward, with a CEO executive summary and a bold vision for making the deal with your people unbreakable.
+Full page: https://www.challenger.house/who-we-are
+
+Marcus Druen (Founder, Organisational Architect: he names the elephant), André Cramer (Human & AI Capability Bridge Builder: what AI does to judgment and decision quality; the Plausibility Illusion framework), Brittney Bean (Builder & Coder, Agentic Systems: what the team designs, she makes work, and makes it survive procurement, legal review and IT governance).
+
+## How we think
+
+Full reference: https://www.challenger.house/how-we-think (Organisational Architecture: how AI exposes the organisation you actually run, and what leadership must redesign). Seven parts, thirty-six chapters. Key anchors:
+
+- [The missing middle](https://www.challenger.house/how-we-think#missing-middle): the formal versus the working organisation, the house, the Tower and the Square.
+- [The four ways of knowing](https://www.challenger.house/how-we-think#four-ways-of-knowing): why you have to experience AI to lead with it.
+- [The five layers](https://www.challenger.house/how-we-think#five-layers): Source, Constitution, Boundaries, Sensorium, Adaptation.
+- [The Talking Tax](https://www.challenger.house/how-we-think#talking-tax): information latency, and the cost of chasing, translating and packaging information.
+- [AI sovereignty](https://www.challenger.house/how-we-think#ai-sovereignty): governing AI because you understand what you use it for, how far it reaches, what it costs and what it does to judgment. Includes the Plausibility Illusion.
+- [The Org Mirror](https://www.challenger.house/how-we-think#org-mirror): reading the working organisation through Morgan, Oshry and Heifetz. An MRI, not surgery.
+- [The AI Constitution](https://www.challenger.house/how-we-think#ai-constitution): the CEO writes the manifesto, the leadership team authors the constitution, IT and Legal build the guardrails and open with an AI amnesty. Authored, not downloaded.
+- [The instruments](https://www.challenger.house/how-we-think#instruments): Org Mirror, AI Constitution, Delegation Dial, Talking Tax, Attention Constitution, information latency.
+
+## Other
+
+- [The Brief (PDF)](https://www.challenger.house/assets/the-brief.pdf): the thinking in one document to read or forward.
 - [FAQ](https://www.challenger.house/faq.html)
 - [Privacy](https://www.challenger.house/privacy.html)
 
 ## Contact
 
-- Book a free intro call: https://calendly.com/marcusdruen/challenger-house-intro-call
+- Book a call: https://calendly.com/marcusdruen/challenger-house-intro-call
 - Marcus Druen, Founder: hello@marcusdruen.com
 - Website: https://www.challenger.house
 

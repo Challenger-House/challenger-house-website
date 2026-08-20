@@ -4,12 +4,26 @@
 https://challenger-house.com/*      https://www.challenger.house/:splat   301!
 https://www.challenger-house.com/*  https://www.challenger.house/:splat   301!
 
-# Old Sprint URLs -> The Build
-/sprint      /build.html   301
-/sprint.html /build.html   301
+# 2026-08 overhaul: the site is now four pages.
+# one-day.html + build.html merged into what-we-do.html,
+# team.html renamed who-we-are.html,
+# architecture.html rebuilt as how-we-think.html,
+# constitution.html folded into how-we-think.html#ai-constitution.
+/one-day            /what-we-do#one-day             301!
+/one-day.html       /what-we-do#one-day             301!
+/build              /what-we-do#build               301!
+/build.html         /what-we-do#build               301!
+/team               /who-we-are                     301!
+/team.html          /who-we-are                     301!
+/architecture       /how-we-think                   301!
+/architecture.html  /how-we-think                   301!
+/constitution       /how-we-think#ai-constitution   301!
+/constitution.html  /how-we-think#ai-constitution   301!
 
-# Page renames
-/experience       /one-day   301!
-/experience.html  /one-day   301!
-/builders         /team      301!
-/builders.html    /team      301!
+# Older renames, pointing straight at the current pages (no redirect chains)
+/sprint             /what-we-do#build               301!
+/sprint.html        /what-we-do#build               301!
+/experience         /what-we-do#one-day             301!
+/experience.html    /what-we-do#one-day             301!
+/builders           /who-we-are                     301!
+/builders.html      /who-we-are                     301!
