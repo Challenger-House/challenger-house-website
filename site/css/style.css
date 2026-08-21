@@ -1666,3 +1666,90 @@ main [id^="arch-"]{ scroll-margin-top:24px }
 .book .chapter{ padding:52px 0 0 }
 .book-part, .book-end{ scroll-margin-top:52px }
 .book .book-end{ padding:64px 0 0 }
+
+/* ============================================================
+   v4 — 2026-08-21 Handover 2.
+   Global width + spacing rules, Talking Tax two-column dial fix,
+   bigger faces, card titles, spec strips, sheet leads.
+   ============================================================ */
+
+/* 0.1 width rule: body text runs the full zone width, type sized up */
+.wrap p.body, .wrap .body, .wrap p.lead, .wrap .step-blocks, .wrap .house-line,
+.wrap-narrow p.body, .wrap-narrow .body{ max-width:none }
+p.body, .body{ font-size:18px; line-height:1.7 }
+p.lead{ font-size:19.5px; line-height:1.65 }
+.step-blocks{ max-width:none }
+.step-blocks p{ font-size:17.5px }
+.tribe-list li span{ max-width:none }
+
+/* 0.2 spacing rule: eyebrow -> headline gap equals headline -> body gap */
+.hero-eyebrow{ margin:0 0 28px }
+.hero-grid{ row-gap:28px }
+.zone{ margin-bottom:28px }
+.hero h1 + .lead.mt-3{ margin-top:28px }
+
+/* landing hero: three-line sub, one size up */
+.hero .sub{ font-size:20px; line-height:1.55; max-width:none }
+.hero .hero-offer{ font-size:18px }
+
+/* landing 1-Day card: bold lead bullets one size up, small mono price line */
+.lead-bullets li{ font-size:16.5px }
+.lead-bullets li strong{ color:var(--ink) }
+.mono-note{
+  font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--ink-soft); margin-top:22px;
+}
+
+/* faces: larger circles */
+.team-face img{ width:132px; height:132px }
+.profile .p-photo{ width:220px; height:220px }
+@media (max-width:640px){ .team-face img{ width:96px; height:96px } }
+@media (max-width:820px){ .profile .p-photo{ width:160px; height:160px } }
+
+/* offer card titles: larger and bolder */
+.offer h3{ font-size:30px; font-weight:700 }
+
+/* sheets: bold lead line + short body (WHO / BRING / THE DAY / BEFORE, outcomes, phases) */
+.sheet h3.lead-line{ font-family:var(--head); font-size:clamp(19px,2vw,23px); line-height:1.25; font-weight:600 }
+.sheet p{ font-family:var(--sans); font-size:15.5px; line-height:1.65 }
+.sheet-grid.c2 .sheet p{ max-width:none }
+
+/* spec strip: one mono line closing an offer section */
+.spec-strip{
+  font-family:var(--mono); font-size:11.5px; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--ink); border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  padding:16px 0; margin-top:56px;
+}
+.spec-strip b{ color:var(--accent-deep); font-weight:600 }
+
+/* capped illustration (1-Day hero) */
+.illus-cap img{ max-height:45vh; width:auto; max-width:100%; height:auto; display:block }
+
+/* callout: bold, green rule, full column width */
+.callout-bold{
+  border-left:3px solid var(--accent); padding:6px 0 6px 24px;
+  font-family:var(--sans); font-size:18px; line-height:1.65; font-weight:600; color:var(--ink);
+  max-width:none;
+}
+
+/* ---------- Talking Tax: two clean columns ----------
+   Left: YOUR TEAM figure with its three inputs stacked under it.
+   Right: THE SHADOW figure with its three inputs stacked under it. */
+.calc-twocol{ display:grid; grid-template-columns:1fr 1fr; gap:0 44px; margin-top:14px }
+.calc-twocol .calc-col + .calc-col{ border-left:1px solid var(--line-soft); padding-left:44px }
+.calc-twocol .calc-result{ margin-top:0; padding-top:14px; margin-bottom:12px }
+.calc-twocol .calc-row{ margin-bottom:6px }
+.calc-twocol .calc-row label{
+  display:flex; justify-content:space-between; align-items:baseline; gap:14px;
+  font-size:13px; line-height:1.45; font-weight:600; margin-bottom:0; min-height:0;
+}
+.calc-twocol .calc-row output{ font-size:14px; display:inline; margin-top:0 }
+.calc-twocol input[type="range"]{ height:30px }
+.calc-shadow .big{ color:#C96F4A }
+.calc-shadow .calc-row output{ color:#C96F4A }
+.calc-shadow input[type="range"]::-webkit-slider-thumb{ border-color:#C96F4A }
+.calc-shadow input[type="range"]::-moz-range-thumb{ border-color:#C96F4A }
+@media (max-width:820px){
+  .calc-twocol{ grid-template-columns:1fr }
+  .calc-twocol .calc-col + .calc-col{ border-left:none; padding-left:0; margin-top:22px; padding-top:18px; border-top:1px solid var(--line-soft) }
+}
