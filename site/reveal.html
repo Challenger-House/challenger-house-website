@@ -163,6 +163,46 @@ body[data-tool="frontier"] .rv .card pre.v-copilot, body[data-tool="copilot"] .r
   .rv details.lens .name{ font-size:18px }
 }
 @media print{ .rv button.copy, .rv .switch{ display:none } .rv details{ display:block } }
+
+/* ---------- v4: profile cards, kits, cloud model ---------- */
+.rv .motto{ font-family:var(--serif); font-weight:600; font-size:clamp(28px,3.4vw,40px); line-height:1.15; margin:26px 0 0 }
+.rv .motto em{ font-style:italic; color:var(--accent); font-weight:500 }
+.rv .group-h{ margin:46px 0 6px }
+.rv .group-sub{ font-size:16px; color:var(--ink-soft); margin:0 0 18px; max-width:70ch }
+.rv .stack{ display:grid; grid-template-columns:1fr; gap:22px; margin-top:22px }
+.rv .sbcard .cbody{ display:grid; grid-template-columns:1fr 1.15fr; border-top:1px solid var(--line-soft) }
+.rv .sb{ margin:0; padding:16px 24px 18px; display:grid; grid-template-columns:1fr; gap:0 }
+.rv .sb > div{ display:grid; grid-template-columns:132px 1fr; gap:12px; padding:9px 0; border-bottom:1px solid var(--line-soft) }
+.rv .sb > div:last-child{ border-bottom:0 }
+.rv .sb dt{ font-family:var(--mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent-deep); padding-top:4px }
+.rv .sb dd{ margin:0; font-family:var(--sans); font-size:15.5px; line-height:1.55 }
+.rv .sb .warn dt{ color:#8A4B1F }
+.rv .pwrap{ display:flex; flex-direction:column; border-left:1px solid var(--line-soft); background:var(--cool) }
+.rv .pwrap .plab{ font-family:var(--mono); font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--accent-deep); padding:16px 24px 0 }
+.rv .pwrap pre{ border-top:0; background:transparent; flex:1 }
+.rv .pwrap .foot{ border-top:1px solid var(--line-soft); background:var(--paper) }
+.rv .kitnote{ font-size:15px; color:var(--ink-soft) }
+.rv .cloud{ display:grid; grid-template-columns:1fr 2.2fr 1fr; gap:0 18px; align-items:stretch; margin:22px 0 10px; max-width:980px }
+.rv .cloud .side{ display:flex; flex-direction:column; justify-content:center; font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent-deep); text-align:right }
+.rv .cloud .side.r{ text-align:left; color:var(--ink-soft) }
+.rv .cloud .side span{ display:block; font-family:var(--sans); font-size:14px; letter-spacing:0; text-transform:none; color:var(--ink-soft); margin-top:4px }
+.rv .floors{ display:flex; flex-direction:column; gap:8px }
+.rv .fl{ display:grid; grid-template-columns:1fr auto; gap:4px 14px; padding:12px 16px; border:1px solid var(--line-mid) }
+.rv .fl b{ font-family:var(--head); font-weight:600; font-size:19px }
+.rv .fl span{ grid-column:1; font-family:var(--sans); font-size:14.5px; color:var(--ink-soft) }
+.rv .fl em{ grid-column:2; grid-row:1 / span 2; align-self:center; font-style:normal; font-family:var(--mono); font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent-deep) }
+.rv .fl.up{ background:var(--paper); border-color:var(--accent-line) }
+.rv .fl.dn{ background:var(--paper-2) }
+.rv .cl{ border-top:2px dashed var(--ink); margin:6px 0; padding-top:4px; font-family:var(--mono); font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; text-align:right }
+.rv .upper, .rv .lower{ display:flex; flex-direction:column; gap:8px }
+@media (max-width:820px){
+  .rv .sbcard .cbody{ grid-template-columns:1fr }
+  .rv .pwrap{ border-left:0; border-top:1px solid var(--line-soft) }
+  .rv .sb > div{ grid-template-columns:1fr; gap:2px }
+  .rv .cloud{ grid-template-columns:1fr; gap:10px }
+  .rv .cloud .side, .rv .cloud .side.r{ text-align:left }
+  .rv .sb, .rv .pwrap .plab{ padding-left:18px; padding-right:18px }
+}
 </style>
 </head>
 <body data-tool="frontier">
@@ -193,17 +233,18 @@ body[data-tool="frontier"] .rv .card pre.v-copilot, body[data-tool="copilot"] .r
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <p class="hero-eyebrow">Leadership prompts and the Org Mirror</p>
+        <p class="hero-eyebrow">From the keynote · Leadership prompts and the Org Mirror</p>
         <h1>AI won't transform your organisation. <em>It will reveal it.</em></h1>
         <p class="lead">Whatever you already are, AI turns up the volume. Your habits, your culture, the way you decide. All of it, louder.</p>
         <p class="lead">So before AI scales it, look at it. See how you really lead and decide. Then choose what you want amplified, and where to step in.</p>
+        <p class="motto">AI won't. <em>You can.</em></p>
       </div>
       <div class="hero-art"><img class="art" src="assets/images/reveal/amplifier.webp" alt="An architectural drawing of a horn: a small figure stands in a narrow corridor that opens through an orange point into a vast amplifying chamber" width="640" height="443"></div>
     </div>
     <nav class="levels" aria-label="Choose your level">
-      <a href="#prompts"><span class="lv">Intermediate · 2 minutes</span><b>Six leadership prompts</b><span class="d">Copy one into Claude, ChatGPT or Copilot. No setup.</span></a>
-      <a href="#lenses"><span class="lv">Advanced · 10-minute read</span><b>The Org Mirror lenses</b><span class="d">Eight ways to see your organisation, plus one question underneath.</span></a>
-      <a href="#build"><span class="lv">Advanced · 15-minute setup</span><b>Build the Org Mirror</b><span class="d">The full method for your team or unit. Free.</span></a>
+      <a href="#prompts"><span class="lv">Intermediate · 5 minutes each</span><b>Six leadership prompts</b><span class="d">See your informal organisation, and your three levers as a leader.</span></a>
+      <a href="#kits"><span class="lv">Advanced · for your leadership team</span><b>Build the missing middle</b><span class="d">Three starter kits: constitution, transcripts, incentives.</span></a>
+      <a href="#lenses"><span class="lv">Advanced · the method</span><b>The Org Mirror</b><span class="d">The model behind the talk, eight lenses, and the full setup. Free.</span></a>
     </nav>
   </div>
 </section>
@@ -212,51 +253,81 @@ body[data-tool="frontier"] .rv .card pre.v-copilot, body[data-tool="copilot"] .r
 <section id="prompts">
   <div class="wrap">
     <p class="zone"><span class="ztext">Zone 01 / Leadership prompts</span></p>
-    <h2>Six prompts that show you how you lead.</h2>
+    <h2>Six prompts. Two floors of the talk.</h2>
     <p class="level">Intermediate · you already use AI at work</p>
-    <p class="lead">No setup. Pick your tool, copy a prompt, paste it in. Each one turns AI into a mirror for your own leadership.</p>
+    <p class="lead">Three prompts look at your informal organisation, the floor where AI reveals what was never written down. Three look at you, through the three levers every leader has. Each one comes with a short profile: what it does, when to use it, what you need, and what to watch out for. Pick your tool first, then copy.</p>
     <div class="switch" role="group" aria-label="Choose your AI tool">
       <button type="button" data-set="frontier" aria-pressed="true">Claude or ChatGPT</button>
       <button type="button" data-set="copilot" aria-pressed="false">Microsoft 365 Copilot</button>
     </div>
     <p class="toolnote only-frontier">Attach or paste your material where the brackets say. Use a work account your organisation has approved.</p>
     <p class="toolnote only-copilot">Copilot reads your mail, calendar and Teams. You need Microsoft 365 Copilot with work data. If you see a Work / Web switch, choose Work.</p>
-    <div class="quick">
-      <article class="card">
-        <div class="top"><span class="n">01</span><h4>What do I actually pay attention to?</h4><p class="why">Your calendar and inbox tell the truth about your priorities. Your team reads them too.</p></div>
-        <pre class="v-frontier">Here is a sample of my sent emails and my calendar from the last three months: [attach or paste]. What do I actually pay attention to? Name the five topics that take most of my time and words. Then compare them with my stated priorities: [your three priorities]. Where do they differ? Give an example for each. Describe patterns, not judgements.</pre>
-        <pre class="v-copilot">Look at my sent emails, my calendar and my Teams chats from the last three months. What do I actually pay attention to? Name the five topics that take most of my time and words. Then compare them with what I would say my priorities are. Where do they differ? Give a dated example for each. Describe patterns, not judgements.</pre>
-        <div class="foot"><button class="copy">Copy</button></div>
+    <h3 class="group-h">Floor 3 · See your informal organisation</h3>
+    <p class="group-sub">What AI reveals before it amplifies it. After Gareth Morgan's metaphors.</p>
+    <div class="stack">
+      <article class="card sbcard">
+        <div class="top"><span class="n">Prompt 01 · Psychic prison</span><h4>Real work has to look like hard work.</h4><p class="why">Nobody wrote that rule. Everybody obeys it. Find the unwritten beliefs that make your team hide or slow down AI.</p></div>
+        <div class="cbody">
+          <dl class="sb"><div><dt>What it does</dt><dd>Finds three unwritten rules that shape how your team really works with AI.</dd></div><div><dt>When to use it</dt><dd>When AI use feels slower or more hidden than it should. Or before a team meeting about ways of working.</dd></div><div><dt>What you need</dt><dd><span class="only-copilot">Copilot reads your team’s meetings, chats and mail from the last month.</span><span class="only-frontier">Two to four weeks of team meeting notes, chats or emails.</span></dd></div><div><dt>Time</dt><dd>About 5 minutes.</dd></div><div><dt>What you get</dt><dd>Three unwritten rules, each with an example, what it protects, and one question to test it with your team.</dd></div><div class="warn"><dt>Watch out</dt><dd>It reads patterns, not people. Never use it to judge individuals. The plausibility illusion: AI sounds right whether or not it is. Check every claim against the source.</dd></div></dl>
+          <div class="pwrap"><span class="plab">The prompt</span>
+          <pre class="v-frontier">Here are notes, chats or emails from my team’s last month: [attach or paste]. Which unwritten rules might be slowing down or hiding our use of AI? For example: “real work has to look like hard work”, or “a polished deck counts more than a good decision”. Name three such rules. For each, give one example from the material, what the rule protects, and one question I could ask my team to test it. Describe patterns, never individuals.</pre>
+          <pre class="v-copilot">Look at my team’s meetings, chats and emails from the last month. Which unwritten rules might be slowing down or hiding our use of AI? For example: “real work has to look like hard work”, or “a polished deck counts more than a good decision”. Name three such rules. For each, give one example from the material, what the rule protects, and one question I could ask my team to test it. Describe patterns, never individuals.</pre>
+          <div class="foot"><button class="copy">Copy</button></div></div>
+        </div>
       </article>
-      <article class="card">
-        <div class="top"><span class="n">02</span><h4>Get on the balcony</h4><p class="why">Step off the dance floor for two minutes and see the pattern you are part of.</p></div>
-        <pre class="v-frontier">Take me to the balcony. Here are my notes or transcripts from the last two weeks: [attach or paste]. What patterns would someone see from above that I can't see from the dance floor? Name three, with one example each. Then give me one question to ask my team this week.</pre>
-        <pre class="v-copilot">Take me to the balcony. Look at my meetings, emails and chats from the last two weeks. What patterns would someone see from above that I can't see from the dance floor? Name three, with one example each. Then give me one question to ask my team this week.</pre>
-        <div class="foot"><button class="copy">Copy</button></div>
+      <article class="card sbcard">
+        <div class="top"><span class="n">Prompt 02 · Political system</span><h4>Who really decides?</h4><p class="why">The org chart shows the official path. Your inbox shows the real one.</p></div>
+        <div class="cbody">
+          <dl class="sb"><div><dt>What it does</dt><dd>Traces one recent decision and compares the official path with the real one.</dd></div><div><dt>When to use it</dt><dd>When a decision keeps getting reopened, or a successful pilot suddenly stalls.</dd></div><div><dt>What you need</dt><dd><span class="only-copilot">Name one recent decision. Copilot reads the mail, chats and meetings around it.</span><span class="only-frontier">The email thread and meeting notes around one recent decision.</span></dd></div><div><dt>Time</dt><dd>About 5 minutes.</dd></div><div><dt>What you get</dt><dd>Who raised it, who was asked, who was left out, and where it was really decided.</dd></div><div class="warn"><dt>Watch out</dt><dd>Describe the system, not the people. Keep the output to yourself until you have checked it. The plausibility illusion: AI sounds right whether or not it is. Check every claim against the source.</dd></div></dl>
+          <div class="pwrap"><span class="plab">The prompt</span>
+          <pre class="v-frontier">Here is the email thread and the meeting notes around one recent decision: [attach or paste]. Who raised it, who was asked, who was left out, and where did it really get decided? Compare that with the official decision path. Describe the system, not the people.</pre>
+          <pre class="v-copilot">Pick this recent decision: [name it]. Look at the emails, chats and meetings around it. Who raised it, who was asked, who was left out, and where did it really get decided? Compare that with the official decision path. Describe the system, not the people.</pre>
+          <div class="foot"><button class="copy">Copy</button></div></div>
+        </div>
       </article>
-      <article class="card">
-        <div class="top"><span class="n">03</span><h4>Technical or adaptive?</h4><p class="why">The problem that keeps coming back is rarely the one you keep fixing.</p></div>
-        <pre class="v-frontier">Here is a problem that keeps coming back: [describe it in two sentences]. Is this a technical problem that expertise or a tool can solve, or an adaptive challenge where people need to change habits, relationships or assumptions? If it is adaptive, what loss might people be protecting? Suggest two small experiments to test your reading.</pre>
-        <pre class="v-copilot">Here is a problem that keeps coming back: [describe it in two sentences]. Use my emails and meetings about it as context. Is this a technical problem that expertise or a tool can solve, or an adaptive challenge where people need to change habits, relationships or assumptions? If it is adaptive, what loss might people be protecting? Suggest two small experiments to test your reading.</pre>
-        <div class="foot"><button class="copy">Copy</button></div>
+      <article class="card sbcard">
+        <div class="top"><span class="n">Prompt 03 · The amplifier</span><h4>What would AI amplify here?</h4><p class="why">Before you scale anything with AI, see what you would be scaling.</p></div>
+        <div class="cbody">
+          <dl class="sb"><div><dt>What it does</dt><dd>Shows what would get louder in your team if AI made the work ten times faster.</dd></div><div><dt>When to use it</dt><dd>Before an AI rollout, a pilot, or a new agent goes live in your team.</dd></div><div><dt>What you need</dt><dd><span class="only-copilot">Copilot reads your team’s meetings and chats from the last month.</span><span class="only-frontier">Notes or transcripts from your team’s recent meetings.</span></dd></div><div><dt>Time</dt><dd>About 5 minutes.</dd></div><div><dt>What you get</dt><dd>Three things worth amplifying and three that would become a problem at scale.</dd></div><div class="warn"><dt>Watch out</dt><dd>Separate what the material shows from what the AI interprets. The plausibility illusion: AI sounds right whether or not it is. Check every claim against the source.</dd></div></dl>
+          <div class="pwrap"><span class="plab">The prompt</span>
+          <pre class="v-frontier">Here are notes or transcripts from my team’s recent meetings: [attach or paste]. If AI made all of this work ten times faster, what would get amplified? Name three things worth amplifying and three that would become a problem at scale. Separate what the material shows from what you are interpreting.</pre>
+          <pre class="v-copilot">Look at my team’s meetings and chats from the last month. If AI made all of this work ten times faster, what would get amplified? Name three things worth amplifying and three that would become a problem at scale. Separate what the material shows from what you are interpreting.</pre>
+          <div class="foot"><button class="copy">Copy</button></div></div>
+        </div>
       </article>
-      <article class="card">
-        <div class="top"><span class="n">04</span><h4>What would AI amplify here?</h4><p class="why">Before you scale anything with AI, see what you would be scaling.</p></div>
-        <pre class="v-frontier">Here are notes or transcripts from my team's recent meetings: [attach or paste]. If AI made all of this work ten times faster, what would get amplified? Name three things worth amplifying and three that would become a problem at scale. Separate what the material shows from what you are interpreting.</pre>
-        <pre class="v-copilot">Look at my team's meetings and chats from the last month. If AI made all of this work ten times faster, what would get amplified? Name three things worth amplifying and three that would become a problem at scale. Separate what the material shows from what you are interpreting.</pre>
-        <div class="foot"><button class="copy">Copy</button></div>
+    </div>
+    <h3 class="group-h">Floor 4 · Your three levers as a leader</h3>
+    <p class="group-sub">After Edgar Schein: what you pay attention to and reward, how you react when something goes wrong, and what you do yourself. In service of one thing: a learning culture.</p>
+    <div class="stack">
+      <article class="card sbcard">
+        <div class="top"><span class="n">Prompt 04 · Lever 1 · Attention and reward</span><h4>What do I actually pay attention to, and reward?</h4><p class="why">Your calendar and inbox tell the truth about your priorities. Your team reads them too.</p></div>
+        <div class="cbody">
+          <dl class="sb"><div><dt>What it does</dt><dd>Compares where your time, words and praise really go with what you say your priorities are.</dd></div><div><dt>When to use it</dt><dd>Before a strategy offsite, a review, or when your team seems to work on the wrong things.</dd></div><div><dt>What you need</dt><dd><span class="only-copilot">Copilot reads your sent mail, calendar and chats from the last three months.</span><span class="only-frontier">A sample of your sent emails and your calendar, plus your three stated priorities.</span></dd></div><div><dt>Time</dt><dd>About 5 minutes.</dd></div><div><dt>What you get</dt><dd>Your five real topics, the gaps against your priorities, and what your team learns gets rewarded.</dd></div><div class="warn"><dt>Watch out</dt><dd>This one is about you. Read it alone first, then decide what to share. The plausibility illusion: AI sounds right whether or not it is. Check every claim against the source.</dd></div></dl>
+          <div class="pwrap"><span class="plab">The prompt</span>
+          <pre class="v-frontier">Here is a sample of my sent emails and my calendar from the last three months: [attach or paste]. My three stated priorities are: [list them]. What do I actually pay attention to? Name the five topics that take most of my time and words, and compare them with my priorities. Then look at what I praised, thanked or escalated. What does that teach my team gets rewarded? Give an example for each. Describe patterns, not judgements.</pre>
+          <pre class="v-copilot">Look at my sent emails, calendar and Teams chats from the last three months. What do I actually pay attention to? Name the five topics that take most of my time and words, and compare them with what I would say my priorities are. Then look at what I praised, thanked or escalated. What does that teach my team gets rewarded? Give a dated example for each. Describe patterns, not judgements.</pre>
+          <div class="foot"><button class="copy">Copy</button></div></div>
+        </div>
       </article>
-      <article class="card">
-        <div class="top"><span class="n">05</span><h4>Who really decides?</h4><p class="why">The org chart shows the official path. Your inbox shows the real one.</p></div>
-        <pre class="v-frontier">Here is the email thread and meeting notes around one recent decision: [attach or paste]. Who raised it, who was asked, who was left out, and where did it really get decided? Compare that with the official decision path. Describe the system, not the people.</pre>
-        <pre class="v-copilot">Pick one recent decision: [name it]. Look at the emails, chats and meetings around it. Who raised it, who was asked, who was left out, and where did it really get decided? Compare that with the official decision path. Describe the system, not the people.</pre>
-        <div class="foot"><button class="copy">Copy</button></div>
+      <article class="card sbcard">
+        <div class="top"><span class="n">Prompt 05 · Lever 2 · Critical incidents</span><h4>When AI gets it wrong, what do I say?</h4><p class="why">“That’s on me.” The first AI mistake shows who you are. Prepare for it before it happens.</p></div>
+        <div class="cbody">
+          <dl class="sb"><div><dt>What it does</dt><dd>Prepares your response to the first AI mistake in your team, and a simple routine to catch the next one.</dd></div><div><dt>When to use it</dt><dd>Before AI goes into real work in your team, or right after the first mistake.</dd></div><div><dt>What you need</dt><dd><span class="only-copilot">Nothing. Optionally, Copilot can use past emails about errors or CAPAs as context.</span><span class="only-frontier">Nothing. Optionally, a short description of a recent mistake.</span></dd></div><div><dt>Time</dt><dd>About 5 minutes.</dd></div><div><dt>What you get</dt><dd>Three sentences you could say, a short checking routine, and two reactions to avoid.</dd></div><div class="warn"><dt>Watch out</dt><dd>In a regulated setting, AI output is never final. A named person checks and releases it.</dd></div></dl>
+          <div class="pwrap"><span class="plab">The prompt</span>
+          <pre class="v-frontier">I lead a team in a regulated medtech environment. AI will make mistakes in our work: invented references, confident wrong answers, plausible but false evidence. Help me prepare for the first time it happens. 1) Draft three sentences I could say in our team meeting that take responsibility and keep people reporting errors, in the spirit of “that’s on me”. 2) Suggest a simple routine for checking AI output before it goes near a submission. 3) Name two reactions from me that would make people hide the next mistake. Optional context: [describe a recent mistake].</pre>
+          <pre class="v-copilot">I lead a team in a regulated medtech environment. AI will make mistakes in our work: invented references, confident wrong answers, plausible but false evidence. Help me prepare for the first time it happens. 1) Draft three sentences I could say in our team meeting that take responsibility and keep people reporting errors, in the spirit of “that’s on me”. 2) Suggest a simple routine for checking AI output before it goes near a submission. Use our past emails about errors or CAPAs as context if you can find them. 3) Name two reactions from me that would make people hide the next mistake.</pre>
+          <div class="foot"><button class="copy">Copy</button></div></div>
+        </div>
       </article>
-      <article class="card">
-        <div class="top"><span class="n">06</span><h4>What am I not seeing?</h4><p class="why">A mirror that only flatters you is no use. Ask for the uncomfortable version.</p></div>
-        <pre class="v-frontier">Here is how I see my team right now: [three sentences]. Check it against this material: [attach or paste emails, notes or transcripts]. What would someone two levels below me say I'm missing? Give me the uncomfortable version, kindly, with evidence.</pre>
-        <pre class="v-copilot">Here is how I see my team right now: [three sentences]. Check it against my emails, meetings and chats from the last month. What would someone two levels below me say I'm missing? Give me the uncomfortable version, kindly, with evidence.</pre>
-        <div class="foot"><button class="copy">Copy</button></div>
+      <article class="card sbcard">
+        <div class="top"><span class="n">Prompt 06 · Lever 3 · Role model</span><h4>What did I do with the hour AI saved me?</h4><p class="why">Your team copies what you do with it. And how you use AI: as a ghostwriter, or as a sparring partner.</p></div>
+        <div class="cbody">
+          <dl class="sb"><div><dt>What it does</dt><dd>Looks at where AI could have given you time back, what you did with it, and how you use AI yourself.</dd></div><div><dt>When to use it</dt><dd>Once a month, as a short self-check. Or before you ask your team to use AI more.</dd></div><div><dt>What you need</dt><dd><span class="only-copilot">Copilot reads your calendar and sent mail from the last month.</span><span class="only-frontier">Your calendar for the last month and a short list of what you used AI for.</span></dd></div><div><dt>Time</dt><dd>About 5 minutes.</dd></div><div><dt>What you get</dt><dd>A picture of your freed time, three honest questions, and one change to model next week.</dd></div><div class="warn"><dt>Watch out</dt><dd>Answer the three questions yourself before you read the AI’s view.</dd></div></dl>
+          <div class="pwrap"><span class="plab">The prompt</span>
+          <pre class="v-frontier">Here is my calendar for the last month and a list of what I used AI for: [attach or paste]. Where might AI have saved me time, and what did I fill that time with: more of the same, thinking time, time with my people, or nothing visible? Then ask me three questions about how I use AI: as a ghostwriter that thinks for me, or as a sparring partner I start with a blank page against. End with one change I could model for my team next week.</pre>
+          <pre class="v-copilot">Look at my calendar and sent emails from the last month. Where might AI have saved me time, and what did I fill that time with: more of the same, thinking time, time with my people, or nothing visible? Then ask me three questions about how I use AI: as a ghostwriter that thinks for me, or as a sparring partner I start with a blank page against. End with one change I could model for my team next week.</pre>
+          <div class="foot"><button class="copy">Copy</button></div></div>
+        </div>
       </article>
     </div>
     <div class="strip">
@@ -266,13 +337,80 @@ body[data-tool="frontier"] .rv .card pre.v-copilot, body[data-tool="copilot"] .r
   </div>
 </section>
 
-<!-- 02 LENSES -->
+<!-- 02 KITS -->
+<section id="kits">
+  <div class="wrap">
+    <p class="zone"><span class="ztext">Zone 02 / Build the missing middle</span></p>
+    <h2>Three things to build, so it doesn't depend on heroes.</h2>
+    <p class="level">Advanced · for your leadership team</p>
+    <p class="lead">Automation runs on your formal organisation: processes, documents, data. Augmentation runs on the informal one: judgement, trust, how people really decide. The bridge between the two is missing. Leaders build it with three things. Each kit gets you a first draft, not a finished answer. The real work happens when your leadership team discusses it.</p>
+    <div class="stack">
+      <article class="card sbcard">
+        <div class="top"><span class="n">Kit 01 · Constitution · Contains the fear</span><h4>Write your AI constitution.</h4><p class="why">Not governance. Not sixty pages. The CEO’s why, what AI is for, what it is never for, and what stays human.</p></div>
+        <div class="cbody">
+          <dl class="sb"><div><dt>What it does</dt><dd>Drafts a one-page AI constitution: the CEO’s manifesto plus clear clauses your people can trust.</dd></div><div><dt>When to use it</dt><dd>Before, or right at the start of, any serious AI rollout. Start with the CEO or managing director.</dd></div><div><dt>What you need</dt><dd>Your company type, size and regulated context. Optionally your strategy or values document.</dd></div><div><dt>Time</dt><dd>20 minutes for the draft, then one leadership-team session to make it yours.</dd></div><div><dt>What you get</dt><dd>A one-page draft with two key clauses built in, plus five questions your leadership team must answer.</dd></div><div class="warn"><dt>Watch out</dt><dd>A draft is not a constitution. Your leadership team writes the final version together, or nobody will believe it.</dd></div></dl>
+          <div class="pwrap"><span class="plab">The prompt</span>
+          <pre>Help me draft a one-page AI constitution for my organisation: [company type, size, regulated context]. Use this structure: 1) The manifesto: three to five sentences from our CEO on why we use AI, in plain language. 2) What we use AI for. 3) What we never use AI for. 4) What stays human, with named decisions. 5) How we handle mistakes. Include these two clauses word for word: “Meeting transcripts are never used for performance evaluation.” and “Final release of a submission stays with a named person.” Add an AI amnesty: people can bring in AI tools they used on private accounts, with no penalty. Write it so anyone can read it in three minutes. Then list five questions our leadership team must answer before we sign it.</pre>
+          <div class="foot"><button class="copy">Copy</button></div></div>
+        </div>
+      </article>
+      <article class="card sbcard">
+        <div class="top"><span class="n">Kit 02 · Transcripts · The hardest adaptive work</span><h4>Make meeting transcripts a habit.</h4><p class="why">Transcripts encode your informal organisation, so you can see the gap between how you say you work and how you do. It only works with high psychological safety.</p></div>
+        <div class="cbody">
+          <dl class="sb"><div><dt>What it does</dt><dd>Sets up consent, ground rules and a four-week pilot for transcribing leadership-team meetings.</dd></div><div><dt>When to use it</dt><dd>After the constitution. Start with the leadership team, never with the people below you.</dd></div><div><dt>What you need</dt><dd>A transcription tool your organisation has approved, and the consent of everyone in the meeting.</dd></div><div><dt>Time</dt><dd>30 minutes to prepare, then one meeting a week for a month.</dd></div><div><dt>What you get</dt><dd>A consent text, five ground rules, a pilot plan, and the questions for your works council and data protection officer.</dd></div><div class="warn"><dt>Watch out</dt><dd>This is not legal advice. In Germany, bring in the works council and data protection early. Read for patterns, never for people.</dd></div></dl>
+          <div class="pwrap"><span class="plab">The prompt</span>
+          <pre>We want to start transcribing our leadership team’s meetings, so we can learn how we really work and decide. We are [company type, country, regulated context]. Draft: 1) a short, plain consent text for participants; 2) five ground rules: who can read transcripts, how long they are kept, what they are never used for, and how anyone can pause the recording; 3) a four-week pilot plan, starting with one meeting a week; 4) the three questions we must agree with our works council and data protection officer before we start. Keep everything short and in plain language.</pre>
+          <div class="foot"><button class="copy">Copy</button></div></div>
+        </div>
+      </article>
+      <article class="card sbcard">
+        <div class="top"><span class="n">Kit 03 · Incentives · Skin in the game</span><h4>Make AI contribution visible, and fairly rewarded.</h4><p class="why">“What’s in it for me? That you can fire me faster?” Answer that question before your people ask it.</p></div>
+        <div class="cbody">
+          <dl class="sb"><div><dt>What it does</dt><dd>Turns the AI work in your team into a simple register, and suggests fair ways to recognise the people who built it.</dd></div><div><dt>When to use it</dt><dd>Once a quarter, or as soon as people start building prompts, templates or agents others use.</dd></div><div><dt>What you need</dt><dd>A list of the AI assets your team uses (prompts, templates, agents, automations) and who built them.</dd></div><div><dt>Time</dt><dd>About 15 minutes.</dd></div><div><dt>What you get</dt><dd>An asset register, three options to recognise the builders, the risks of each, and a paragraph for your next team meeting.</dd></div><div class="warn"><dt>Watch out</dt><dd>Start with recognition, not money. A promise you cannot keep destroys more trust than no promise.</dd></div></dl>
+          <div class="pwrap"><span class="plab">The prompt</span>
+          <pre>Help me make the AI work in my team visible and fairly recognised. Here is what I know about the AI assets we use: [list prompts, templates, agents, automations, and who built each one]. 1) Turn this into a simple register: asset, builder, who uses it, estimated time saved per month. 2) Suggest three ways to recognise the builders, from public praise to a share in the value created. 3) Name the risks of each option. 4) Draft one short paragraph I could say in our next team meeting.</pre>
+          <div class="foot"><button class="copy">Copy</button></div></div>
+        </div>
+      </article>
+    </div>
+    <div class="block" style="margin-top:28px"><div class="block-head"><span class="lab">Bonus · The last slide of every presentation</span><button class="copy" data-copy="lastslide">Copy</button></div><p class="why">Make AI use visible, leaders first. One slide at the end of every presentation and meeting. What one person learns, the whole room learns. Then praise it in public.</p><pre id="lastslide">WHERE I USED AI
+[Research] [First draft] [Checking the wording] [Asked it to argue against my draft]
+
+WHAT I LEARNED
+What worked: [one thing, e.g. "giving it our template first saved an hour"]
+What went wrong, and how I caught it: [e.g. "it invented one reference, so I checked every source"]</pre></div>
+    <div class="strip">
+      <p><span class="lab">Building this?</span>A constitution, a transcript habit and fair incentives are adaptive work. Talk it through with someone who has done it. The first hour is free.</p>
+      <a class="btn-bar inline" href="https://calendly.com/marcusdruen/challenger-house-intro-call" target="_blank" rel="noopener" data-track="Book call" data-where="after-kits">Book a free hour &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- 03 LENSES -->
 <section id="lenses">
   <div class="wrap">
-    <p class="zone"><span class="ztext">Zone 02 / The Org Mirror: the lenses</span></p>
-    <h2>Eight ways to look at the same organisation.</h2>
-    <p class="level">Advanced · the thinking behind the mirror</p>
-    <p class="lead">The leadership prompts look at you. The Org Mirror looks at your team or unit, and shows what AI would amplify there. It borrows from two bodies of work. Gareth Morgan showed that every way of seeing an organisation is a metaphor. Each one shows something and hides something. Tap any lens to open it.</p>
+    <p class="zone"><span class="ztext">Zone 03 / The Org Mirror</span></p>
+    <h2>The model behind the talk, and eight ways to see your organisation.</h2>
+    <p class="level">Advanced · the method</p>
+    <p class="lead">The leadership prompts look at you. The Org Mirror looks at your team or unit, and shows what AI would amplify there.</p>
+
+    <h3>The cloud line</h3>
+    <div class="cloud" role="img" aria-label="Four floors. Below the cloud line: 01 Infrastructure with IT budget and 02 Enablement with L&D budget, a technical problem. Above the cloud line: 03 Informal organisation with no budget and 04 Leadership with no owner, an adaptive challenge.">
+      <div class="side">Elite sport<span>Adaptive challenge. Where AI becomes your edge.</span></div>
+      <div class="floors">
+        <div class="fl up"><b>04 · Leadership</b><span>How you behave, and what you build</span><em>No owner: claim it</em></div>
+        <div class="fl up"><b>03 · Informal organisation</b><span>Culture, psychological safety, identity</span><em>No budget</em></div>
+        <div class="cl">Cloud line</div>
+        <div class="fl dn"><b>02 · Enablement</b><span>Training, ambassadors, lunch and learns</span><em>L&amp;D budget</em></div>
+        <div class="fl dn"><b>01 · Infrastructure</b><span>Licences, tools, access</span><em>IT budget</em></div>
+      </div>
+      <div class="side r">Grassroots sport<span>Technical problem. AI as business as usual.</span></div>
+    </div>
+    <p>Below the cloud line, AI is business as usual: licences, tools and training. Experts can solve it, and someone has a budget. Above it, AI becomes your edge, and also reveals who you are: your informal organisation and how you lead. Up there, nobody has a budget and nobody owns it. That is adaptive work, and leaders have to claim it.</p>
+    <p class="src">Adapted from Gacs &amp; Naumann, The Agile Habit · Heifetz &amp; Linsky, adaptive leadership · Schein, Organizational Culture and Leadership</p>
+
+    <h3>Eight lenses for floor three</h3>
+    <p>Gareth Morgan showed that every way of seeing an organisation is a metaphor. Each one shows something and hides something. Tap any lens to open it.</p>
     <div class="morgan">
       <details class="lens">
         <summary><span class="pic"><img class="art" src="assets/images/reveal/machine.webp" alt="A concrete building front with three huge gears, an orange hub at the centre, a small figure on the walkway" loading="lazy"></span><span class="meta"><span class="n">LENS 01</span><span class="name">Machine</span><span class="q">What runs like clockwork, and what can't?</span><span class="more">Open +</span></span></summary>
@@ -296,7 +434,7 @@ body[data-tool="frontier"] .rv .card pre.v-copilot, body[data-tool="copilot"] .r
       </details>
       <details class="lens">
         <summary><span class="pic"><img class="art" src="assets/images/reveal/prison.webp" alt="A lone figure before a huge concrete gateway, an orange sun visible through it" loading="lazy"></span><span class="meta"><span class="n">LENS 06</span><span class="name">Psychic prison</span><span class="q">Which rule does nobody question?</span><span class="more">Open +</span></span></summary>
-        <div class="open"><p><b>LOOKS AT</b>Unconscious assumptions, inherited beliefs, identity.</p><p><b>REVEALS</b>Rules nobody questions and success formulas that became traps.</p><p><b>HIDES</b>Real constraints that are not in anyone's head.</p><p><b>WHAT AI AMPLIFIES</b>Old assumptions, automated and harder to see.</p></div>
+        <div class="open"><p><b>LOOKS AT</b>Unconscious assumptions, inherited beliefs, identity.</p><p><b>REVEALS</b>Rules nobody questions, like “real work has to look like hard work”, and success formulas that became traps.</p><p><b>HIDES</b>Real constraints that are not in anyone's head.</p><p><b>WHAT AI AMPLIFIES</b>Old assumptions, automated and harder to see.</p></div>
       </details>
       <details class="lens">
         <summary><span class="pic"><img class="art" src="assets/images/reveal/flux.webp" alt="Rigid concrete blocks dissolving into a spiral of curved terraces around an orange centre" loading="lazy"></span><span class="meta"><span class="n">LENS 07</span><span class="name">Flux and transformation</span><span class="q">What wants to evolve, and what are we over-controlling?</span><span class="more">Open +</span></span></summary>
@@ -328,10 +466,10 @@ body[data-tool="frontier"] .rv .card pre.v-copilot, body[data-tool="copilot"] .r
   </div>
 </section>
 
-<!-- 03 BUILD -->
+<!-- 04 BUILD -->
 <section id="build">
   <div class="wrap">
-    <p class="zone"><span class="ztext">Zone 03 / The Org Mirror: build it</span></p>
+    <p class="zone"><span class="ztext">Zone 04 / The Org Mirror: build it</span></p>
     <h2>Want to do this properly? Here is everything.</h2>
     <p class="level">Advanced · about 15 minutes to set up · free</p>
     <p class="lead">Point the mirror at your own team or unit, with all the lenses, evidence and salience. We give the whole method away. Open the steps in order.</p>
@@ -464,10 +602,10 @@ Read the sources now. Don't analyse yet. Confirm the brief and tell me what is m
   </div>
 </section>
 
-<!-- 04 CONTACT -->
+<!-- 05 CONTACT -->
 <section id="talk">
   <div class="wrap">
-    <p class="zone"><span class="ztext">Zone 04 / Let's talk</span></p>
+    <p class="zone"><span class="ztext">Zone 05 / Let's talk</span></p>
     <div class="contact-grid">
       <div>
         <h2>Stuck, curious, or saw something you can't unsee?</h2>
